@@ -5,7 +5,7 @@ import FeatureCard from "../components/FeatureCard";
 import StatsItem from "../components/StatsItem";
 import ImageSection from "../components/ImageSection";
 import StoreTypesSidebar from "../components/StoreTypesSidebar";
-import DecorativeBackground from "../components/DecorativeBackground";
+import PageDecorations from "../components/PageDecorations";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function StorePage() {
@@ -93,15 +93,12 @@ export default function StorePage() {
   ];
 
   return (
-    <div className="relative min-h-screen w-full bg-white" >
+    <div className="relative min-h-screen w-full bg-white overflow-x-hidden" >
       {/* Scroll Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 origin-left z-50"
         style={{ scaleX }}
       />
-
-      {/* Decorative Background Elements */}
-      <DecorativeBackground />
 
       {/* Hero Section */}
       <motion.div 
@@ -115,13 +112,17 @@ export default function StorePage() {
 
       {/* Features Section */}
       <motion.section 
-        className="relative mx-auto mt-[80px] md:mt-[150px] max-w-[1440px] px-4 md:px-10"
+        className="relative mx-auto mt-[80px] md:mt-[150px] px-4 md:px-10 overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
         variants={fadeInUp}
       >
+        {/* Decorations */}
+        <PageDecorations />
+        
+        <div className="max-w-[1440px] mx-auto">
         {/* Section Title */}
         <div className="mb-[50px] md:mb-[100px]">
           <SectionTitle 
@@ -152,17 +153,22 @@ export default function StorePage() {
             </motion.div>
           ))}
         </motion.div>
+        </div>
       </motion.section>
 
       {/* Stats Section */}
       <motion.section 
-        className="relative mx-auto mt-[100px] md:mt-[200px] max-w-[1440px] px-4 md:px-10"
+        className="relative mx-auto mt-[100px] md:mt-[200px] px-4 md:px-10 overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
         variants={fadeInUp}
       >
+        {/* Decorations */}
+        <PageDecorations />
+        
+        <div className="max-w-[1440px] mx-auto">
         {/* Section Title */}
         <div className="mb-[50px] md:mb-[100px]">
           <SectionTitle 
@@ -194,6 +200,7 @@ export default function StorePage() {
             </motion.div>
           ))}
         </motion.div>
+        </div>
       </motion.section>
 
       {/* Image and Store Types Section */}

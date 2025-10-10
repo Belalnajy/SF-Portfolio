@@ -1,10 +1,14 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import svgPaths from "../imports/svg-ehumhacyno";
 import imgBanner from "/herostorebanner.png";
 
 export default function HeroStore() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative h-[450px] sm:h-[550px] lg:h-[600px] w-full overflow-hidden mt-12 md:mt-0">
-      {/* Background Image */}
+   
       <div className="absolute inset-0">
         <img 
           src={imgBanner} 
@@ -49,7 +53,11 @@ export default function HeroStore() {
             <p>المنافسة لم تعد بالسعر فقط، بل بالتجربة. نحن نقدم لك حلًا تقنيًا متكاملًا يرفع مبيعاتك ويزيد ولاء عملائك.</p>
           </div>
           </div>
-          <button className="bg-[#5dba47] hover:bg-[#4da339] text-white font-semibold px-8 py-4 rounded-[20px] text-[16px] sm:text-[18px] transition-all duration-300" dir="rtl">
+          <button 
+            onClick={() => navigate('/store-form')}
+            className="bg-[#5dba47] hover:bg-[#4da339] text-white font-semibold px-8 py-4 rounded-[20px] text-[16px] sm:text-[18px] transition-all duration-300" 
+            dir="rtl"
+          >
             كن شريك نجاح
           </button>
         </div>
@@ -70,7 +78,10 @@ export default function HeroStore() {
               <p>المنافسة لم تعد بالسعر فقط، بل بالتجربة. نحن نقدم لك حلًا تقنيًا متكاملًا يرفع مبيعاتك ويزيد ولاء عملائك.</p>
             </div>
             <div className="text-right">
-              <button className="bg-[#5dba47] hover:bg-[#4da339] text-white font-bold px-10 py-5 rounded-[20px] text-[18px] xl:text-[21px] transition-all duration-300">
+              <button 
+                onClick={() => navigate('/store-form')}
+                className="bg-[#5dba47] hover:bg-[#4da339] text-white font-bold px-10 py-5 rounded-[20px] text-[18px] xl:text-[21px] transition-all duration-300"
+              >
                 كن شريك نجاح
               </button>
             </div>

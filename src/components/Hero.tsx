@@ -1,5 +1,11 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import DownloadAppModal from "./DownloadAppModal";
 
 export function Hero() {
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Mobile Hero Section - Shows only on mobile */}
@@ -34,12 +40,18 @@ export function Hero() {
 
             {/* Buttons */}
             <div className="flex flex-col gap-[15px] w-full max-w-[320px]">
-              <button className="flex items-center justify-center h-[60px] w-full px-[20px] rounded-[12px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors shadow-md">
+              <button 
+                onClick={() => setShowDownloadModal(true)}
+                className="flex items-center justify-center h-[60px] w-full px-[20px] rounded-[12px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors shadow-md"
+              >
                 <span className="text-white text-[18px] font-bold">
                   أحصل على التطبيق الان
                 </span>
               </button>
-              <button className="flex items-center justify-center h-[60px] w-full px-[20px] rounded-[12px] bg-white border-2 border-[#5dba47] hover:bg-[rgba(93,186,71,0.05)] transition-colors">
+              <button 
+                onClick={() => navigate('/store-form')}
+                className="flex items-center justify-center h-[60px] w-full px-[20px] rounded-[12px] bg-white border-2 border-[#5dba47] hover:bg-[rgba(93,186,71,0.05)] transition-colors"
+              >
                 <span className="text-[#5dba47] text-[18px] font-bold">
                   كن شريك نجاح
                 </span>
@@ -88,12 +100,18 @@ export function Hero() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-[20px] items-center">
-              <button className="flex items-center justify-center h-[75px] w-[260px] px-[20px] py-[5px] rounded-[15px] bg-[rgba(44,70,83,0.05)] hover:bg-[rgba(44,70,83,0.1)] transition-colors">
+              <button 
+                onClick={() => navigate('/store-form')}
+                className="flex items-center justify-center h-[75px] w-[260px] px-[20px] py-[5px] rounded-[15px] bg-[rgba(44,70,83,0.05)] hover:bg-[rgba(44,70,83,0.1)] transition-colors"
+              >
                   <span className="text-[#5dba47] text-[20px] font-bold whitespace-nowrap">
                     كن شريك نجاح
                   </span>
                 </button>
-                <button className="flex items-center justify-center h-[75px] w-[260px] px-[20px] py-[5px] rounded-[15px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors">
+                <button 
+                  onClick={() => setShowDownloadModal(true)}
+                  className="flex items-center justify-center h-[75px] w-[260px] px-[20px] py-[5px] rounded-[15px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors"
+                >
                   <span className="text-white text-[20px] font-bold whitespace-nowrap">
                     أحصل على التطبيق الان
                   </span>
@@ -105,6 +123,9 @@ export function Hero() {
           </div>
         </div>
       </section>
+      
+      {/* Download App Modal */}
+      <DownloadAppModal isOpen={showDownloadModal} onClose={() => setShowDownloadModal(false)} />
     </>
   );
 }

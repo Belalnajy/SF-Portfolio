@@ -1,8 +1,12 @@
+import PageDecorations from "./PageDecorations";
 
 export function AboutSection() {
   return (
     <>
     <section className="relative py-12 sm:py-16 md:py-20 lg:py-[80px] overflow-hidden hidden lg:block">
+      {/* Decorations */}
+      <PageDecorations />
+      
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-[40px]">
         <div className="flex  flex-row items-center justify-between gap-[20px] ">
           {/* Left - Content */}

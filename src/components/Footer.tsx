@@ -1,4 +1,7 @@
 import svgPaths from "./svg-ydrjxszx6x";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import DownloadAppModal from "./DownloadAppModal";
 
 function Facebook() {
   return (
@@ -115,9 +118,12 @@ function Logo() {
 
 
 function Footer() {
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+  
   return (
-    <footer className="bg-[#132c38] w-full py-12 lg:py-[50px]">
-      <div className="container mx-auto px-6 lg:px-[40px]">
+    <>
+      <footer className="bg-[#132c38] w-full py-12 lg:py-[50px]">
+        <div className="container mx-auto px-6 lg:px-[40px]">
         {/* Desktop & Tablet Layout */}
         <div className="hidden md:block">
           {/* Navigation Grid - 3 cols (tablet), 6 cols (desktop) - Logo is the 6th item */}
@@ -135,9 +141,9 @@ function Footer() {
                   كن شريك النجاح
                 </h3>
                 <div className="flex flex-col gap-2 text-[rgba(249,249,249,0.65)] text-[12px] font-semibold font-['Cairo:SemiBold',_sans-serif]">
-                  <p dir="auto">سجل كموظف</p>
-                  <p dir="auto">شراكة الامتياز التجاري (فرنشايز)</p>
-                  <p dir="auto">برنامج الاستثمار</p>
+                  <Link to="/employee" className="hover:text-[#5dba47] transition-colors" dir="auto">سجل كموظف</Link>
+                  <Link to="/store-form" className="hover:text-[#5dba47] transition-colors" dir="auto">شراكة الامتياز التجاري (فرنشايز)</Link>
+                  <Link to="/invest" className="hover:text-[#5dba47] transition-colors" dir="auto">برنامج الاستثمار</Link>
                 </div>
               </div>
 
@@ -157,9 +163,9 @@ function Footer() {
                   عن S&F
                 </h3>
                 <div className="flex flex-col gap-2 text-[rgba(249,249,249,0.65)] text-[12px] font-semibold font-['Cairo:SemiBold',_sans-serif]">
-                  <p dir="auto">حول التطبيق</p>
-                  <p dir="auto">الصفحة الرئيسية</p>
-                  <p dir="auto">تحميل التطبيق</p>
+                  <Link to="/about" className="hover:text-[#5dba47] transition-colors" dir="auto">حول التطبيق</Link>
+                  <Link to="/" className="hover:text-[#5dba47] transition-colors" dir="auto">الصفحة الرئيسية</Link>
+                  <button onClick={() => setShowDownloadModal(true)} className="hover:text-[#5dba47] transition-colors text-right cursor-pointer " dir="auto">تحميل التطبيق</button>
                 </div>
               </div>
 
@@ -248,9 +254,9 @@ function Footer() {
                 كن شريك النجاح
               </h3>
               <div className="flex flex-col gap-1.5 text-[rgba(249,249,249,0.65)] text-[11px] font-semibold font-['Cairo:SemiBold',_sans-serif]">
-                <p dir="auto">سجل كموظف</p>
-                <p dir="auto">شراكة الامتياز التجاري (فرنشايز)</p>
-                <p dir="auto">برنامج الاستثمار</p>
+                <Link to="/employee" className="hover:text-[#5dba47] transition-colors" dir="auto">سجل كموظف</Link>
+                <Link to="/store-form" className="hover:text-[#5dba47] transition-colors" dir="auto">شراكة الامتياز التجاري (فرنشايز)</Link>
+                <Link to="/invest" className="hover:text-[#5dba47] transition-colors" dir="auto">برنامج الاستثمار</Link>
               </div>
             </div>
 
@@ -270,9 +276,9 @@ function Footer() {
                 عن S&F
               </h3>
               <div className="flex flex-col gap-1.5 text-[rgba(249,249,249,0.65)] text-[11px] font-semibold font-['Cairo:SemiBold',_sans-serif]">
-                <p dir="auto">حول التطبيق</p>
-                <p dir="auto">الصفحة الرئيسية</p>
-                <p dir="auto">تحميل التطبيق</p>
+                <Link to="/about" className="hover:text-[#5dba47] transition-colors" dir="auto">حول التطبيق</Link>
+                <Link to="/" className="hover:text-[#5dba47] transition-colors" dir="auto">الصفحة الرئيسية</Link>
+                <button onClick={() => setShowDownloadModal(true)} className="hover:text-[#5dba47] transition-colors text-right cursor-pointer" dir="auto">تحميل التطبيق</button>
               </div>
             </div>
           </div>
@@ -307,7 +313,11 @@ function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+      </footer>
+      
+      {/* Download App Modal */}
+      <DownloadAppModal isOpen={showDownloadModal} onClose={() => setShowDownloadModal(false)} />
+    </>
   );
 }
 

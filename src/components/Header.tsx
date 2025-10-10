@@ -3,9 +3,11 @@ import svgPaths from "../imports/svg-x8okmw8j48";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import DownloadAppModal from "./DownloadAppModal";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Close menu on scroll
@@ -38,26 +40,36 @@ export function Header() {
   }, [mobileMenuOpen]);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 bg-white/80 backdrop-blur-sm z-[10000]" ref={menuRef}>
-      <div className="container mx-auto flex items-center justify-between px-[40px] py-[37px]">
-        <Logo />
-        <Actions mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
-      </div>
+    <>
+      <header className="fixed left-0 right-0 top-0 z-50 bg-white/80 backdrop-blur-sm z-[10000]" ref={menuRef}>
+        <div className="container mx-auto flex items-center justify-between px-[40px] py-[37px]">
+          <Logo />
+          <Actions 
+            mobileMenuOpen={mobileMenuOpen} 
+            setMobileMenuOpen={setMobileMenuOpen}
+            setShowDownloadModal={setShowDownloadModal}
+          />
+        </div>
       
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 animate-in slide-in-from-top-2">
           <div className="flex flex-col p-4 gap-3">
             <MobileNavigation setMobileMenuOpen={setMobileMenuOpen} />
-            <div className="border-t border-gray-200 pt-3 mt-3">
+            <div className="border-t border-gray-200 pt-3 mt-3 flex items-center gap-[20px]" dir="rtl">
               <LanguageButton />
-              <ContactButton />
+              {/* <ContactButton /> */}
+              
               <InvestButton />
             </div>
           </div>
         </div>
       )}
-    </header>
+      </header>
+      
+      {/* Download App Modal */}
+      <DownloadAppModal isOpen={showDownloadModal} onClose={() => setShowDownloadModal(false)} />
+    </>
   );
 }
 
@@ -104,13 +116,14 @@ function Logo() {
   );
 }
 
-function Actions({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean; setMobileMenuOpen: (open: boolean) => void }) {
+function Actions({ mobileMenuOpen, setMobileMenuOpen, setShowDownloadModal }: { mobileMenuOpen: boolean; setMobileMenuOpen: (open: boolean) => void; setShowDownloadModal: (show: boolean) => void }) {
   return (
     <div className="flex items-center gap-[60px] shrink-0">
       <Navigation />
-      <div className="hidden md:flex items-center gap-[10px]">
+      <div className="hidden lg:flex items-center gap-[20px]">
         <LanguageButton />
-        <ContactButton />
+        {/* <ContactButton /> */}
+        <DownloadAppButton setShowDownloadModal={setShowDownloadModal} />
         <InvestButton />
       </div>
       <MenuButton mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
@@ -141,21 +154,32 @@ function LanguageButton() {
   );
 }
 
-function ContactButton() {
+// function ContactButton() {
+//   return (
+//     <Link 
+//       to="/store-form"
+//       className="flex items-center justify-center gap-[5px] h-[50px] px-[20px] py-[5px] rounded-[20px] hover:bg-[rgba(44,70,83,0.05)] transition-colors"
+//     >
+//       <span className="text-[#2c4653] text-[18px] font-bold whitespace-nowrap">تواصل معنا</span>
+//     </Link>
+//   );
+// }
+
+function DownloadAppButton({ setShowDownloadModal }: { setShowDownloadModal: (show: boolean) => void }) {
   return (
-    <Link 
-      to="/contact"
-      className="flex items-center justify-center gap-[5px] h-[50px] px-[20px] py-[5px] rounded-[20px] hover:bg-[rgba(44,70,83,0.05)] transition-colors"
+    <button 
+      onClick={() => setShowDownloadModal(true)}
+      className="flex items-center justify-center gap-[5px] h-[50px] px-[20px] py-[5px] rounded-[20px] bg-[rgba(44,70,83,0.05)] hover:bg-[rgba(44,70,83,0.1)] transition-colors"
     >
-      <span className="text-[#2c4653] text-[18px] font-bold whitespace-nowrap">تواصل معنا</span>
-    </Link>
+      <span className="text-[#5DBA47] text-[18px] font-bold whitespace-nowrap">حمّل التطبيق</span>
+    </button>
   );
 }
 
 function InvestButton() {
   const navigate = useNavigate();
   const handleInvest = () => {
-    navigate("/invest");
+    navigate("/invest-main");
   };
 
   return (
@@ -175,7 +199,7 @@ function Navigation() {
     { name: "الرئيسية", path: "/" },
     { name: "المتاجر", path: "/store" },
     { name: "من نحن", path: "/about" },
-    { name: "تواصل معنا", path: "/contact" }
+    { name: "تواصل معنا", path: "/store-form" }
   ];
 
   return (
@@ -204,7 +228,7 @@ function MobileNavigation({ setMobileMenuOpen }: { setMobileMenuOpen: (open: boo
     { name: "الرئيسية", path: "/" },
     { name: "المتاجر", path: "/store" },
     { name: "من نحن", path: "/about" },
-    { name: "تواصل معنا", path: "/contact" }
+    { name: "تواصل معنا", path: "/store-form" }
   ];
 
   return (

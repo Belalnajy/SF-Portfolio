@@ -1,6 +1,8 @@
 import How2 from "./How-2.tsx";
 import svgPaths from "./svg-5tl7sxp3us.ts";
-import { ShoppingCart } from "lucide-react"
+import { ShoppingCart } from "lucide-react";
+import { useState } from "react";
+import DownloadAppModal from "./DownloadAppModal";
 function Title() {
   return (
     <div className="absolute box-border content-stretch flex flex-col font-['Cairo:Bold',_sans-serif] font-bold items-center justify-center leading-[normal] left-[calc(50%+17.5px)] not-italic pb-[8px] pt-0 px-0 text-nowrap text-right top-[132px] translate-x-[-50%] whitespace-pre" data-name="TITLE">
@@ -14,23 +16,27 @@ function Title() {
   );
 }
 
-function Lang() {
+function Lang({ onClick }: { onClick: () => void }) {
   return (
-    <div className="bg-[#5dba47] box-border content-stretch flex gap-[5px] h-[75px] items-center justify-center px-[20px] py-[5px] relative rounded-[15px] shrink-0 w-[260px]" data-name="lang">
+    <button 
+      onClick={onClick}
+      className="bg-[#5dba47] hover:bg-[#4da93a] box-border content-stretch flex gap-[5px] h-[75px] items-center justify-center px-[20px] py-[5px] relative rounded-[15px] shrink-0 w-[260px] transition-colors cursor-pointer" 
+      data-name="lang"
+    >
       <p className="font-['Cairo:Bold',_sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[20px] text-nowrap text-white whitespace-pre" dir="auto">
         أحصل على التطبيق الان
       </p>
-    </div>
+    </button>
   );
 }
 
-function Text() {
+function Text({ onDownloadClick }: { onDownloadClick: () => void }) {
   return (
     <div className="absolute content-stretch flex flex-col gap-[10px] items-center justify-center left-[calc(50%+17.5px)] top-[790px] translate-x-[-50%] w-[700px]" data-name="text">
       <p className="font-['Cairo:SemiBold',_sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[20px] text-[rgba(44,70,83,0.7)] text-nowrap text-right whitespace-pre" dir="auto">
         تجربة تسوق جديدة تبدأ بضغطة زر
       </p>
-      <Lang />
+      <Lang onClick={onDownloadClick} />
     </div>
   );
 }
@@ -301,7 +307,10 @@ function MobileStepCard({ icon, title, description }: { icon: React.ReactNode; t
 }
 
 function HowItWorks() {
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+  
   return (
+    <>
     <section className="relative w-full min-h-[1000px] lg:h-[1000px] py-0 md:py-[80px] overflow-hidden">
       {/* Background decorations - hidden on mobile */}
       <div className="hidden  xl:block absolute" data-name="Vector">
@@ -386,7 +395,7 @@ function HowItWorks() {
       {/* Desktop layout with absolute positioning */}
       <div className="hidden lg:block">
         <Title />
-        <Text />
+        <Text onDownloadClick={() => setShowDownloadModal(true)} />
         <Item />
         <Item1 />
         <Item2 />
@@ -448,6 +457,10 @@ function HowItWorks() {
 
 
     </section>
+    
+    {/* Download App Modal */}
+    <DownloadAppModal isOpen={showDownloadModal} onClose={() => setShowDownloadModal(false)} />
+    </>
   );
 }
 
