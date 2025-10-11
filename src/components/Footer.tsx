@@ -1,7 +1,5 @@
 import svgPaths from "./svg-ydrjxszx6x";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import DownloadAppModal from "./DownloadAppModal";
 
 function Facebook() {
   return (
@@ -118,7 +116,9 @@ function Logo() {
 
 
 function Footer() {
-  const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const handleDownloadApp = () => {
+    window.open('https://docs.google.com/forms/d/1LiQrZB2muwkIZRAyfhvkXgIy0xNo8n9KvQTgfla4zbM/edit?usp=drivesdk', '_blank');
+  };
   
   return (
     <>
@@ -165,7 +165,7 @@ function Footer() {
                 <div className="flex flex-col gap-2 text-[rgba(249,249,249,0.65)] text-[12px] font-semibold font-['Cairo:SemiBold',_sans-serif]">
                   <Link to="/about" className="hover:text-[#5dba47] transition-colors" dir="auto">حول التطبيق</Link>
                   <Link to="/" className="hover:text-[#5dba47] transition-colors" dir="auto">الصفحة الرئيسية</Link>
-                  <button onClick={() => setShowDownloadModal(true)} className="hover:text-[#5dba47] transition-colors text-right cursor-pointer " dir="auto">تحميل التطبيق</button>
+                  <button onClick={handleDownloadApp} className="hover:text-[#5dba47] transition-colors text-right cursor-pointer " dir="auto">تحميل التطبيق</button>
                 </div>
               </div>
 
@@ -278,7 +278,7 @@ function Footer() {
               <div className="flex flex-col gap-1.5 text-[rgba(249,249,249,0.65)] text-[11px] font-semibold font-['Cairo:SemiBold',_sans-serif]">
                 <Link to="/about" className="hover:text-[#5dba47] transition-colors" dir="auto">حول التطبيق</Link>
                 <Link to="/" className="hover:text-[#5dba47] transition-colors" dir="auto">الصفحة الرئيسية</Link>
-                <button onClick={() => setShowDownloadModal(true)} className="hover:text-[#5dba47] transition-colors text-right cursor-pointer" dir="auto">تحميل التطبيق</button>
+                <button onClick={handleDownloadApp} className="hover:text-[#5dba47] transition-colors text-right cursor-pointer" dir="auto">تحميل التطبيق</button>
               </div>
             </div>
           </div>
@@ -314,9 +314,6 @@ function Footer() {
         </div>
       </div>
       </footer>
-      
-      {/* Download App Modal */}
-      <DownloadAppModal isOpen={showDownloadModal} onClose={() => setShowDownloadModal(false)} />
     </>
   );
 }

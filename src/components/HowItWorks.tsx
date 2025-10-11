@@ -1,8 +1,6 @@
 import How2 from "./How-2.tsx";
 import svgPaths from "./svg-5tl7sxp3us.ts";
 import { ShoppingCart } from "lucide-react";
-import { useState } from "react";
-import DownloadAppModal from "./DownloadAppModal";
 function Title() {
   return (
     <div className="absolute box-border content-stretch flex flex-col font-['Cairo:Bold',_sans-serif] font-bold items-center justify-center leading-[normal] left-[calc(50%+17.5px)] not-italic pb-[8px] pt-0 px-0 text-nowrap text-right top-[132px] translate-x-[-50%] whitespace-pre" data-name="TITLE">
@@ -307,7 +305,9 @@ function MobileStepCard({ icon, title, description }: { icon: React.ReactNode; t
 }
 
 function HowItWorks() {
-  const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const handleDownloadApp = () => {
+    window.open('https://docs.google.com/forms/d/1LiQrZB2muwkIZRAyfhvkXgIy0xNo8n9KvQTgfla4zbM/edit?usp=drivesdk', '_blank');
+  };
   
   return (
     <>
@@ -395,7 +395,7 @@ function HowItWorks() {
       {/* Desktop layout with absolute positioning */}
       <div className="hidden lg:block">
         <Title />
-        <Text onDownloadClick={() => setShowDownloadModal(true)} />
+        <Text onDownloadClick={handleDownloadApp} />
         <Item />
         <Item1 />
         <Item2 />
@@ -457,9 +457,6 @@ function HowItWorks() {
 
 
     </section>
-    
-    {/* Download App Modal */}
-    <DownloadAppModal isOpen={showDownloadModal} onClose={() => setShowDownloadModal(false)} />
     </>
   );
 }

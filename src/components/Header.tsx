@@ -3,12 +3,14 @@ import svgPaths from "../imports/svg-x8okmw8j48";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import DownloadAppModal from "./DownloadAppModal";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showDownloadModal, setShowDownloadModal] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  
+  const handleDownloadApp = () => {
+    window.open('https://docs.google.com/forms/d/1LiQrZB2muwkIZRAyfhvkXgIy0xNo8n9KvQTgfla4zbM/edit?usp=drivesdk', '_blank');
+  };
 
   // Close menu on scroll
   useEffect(() => {
@@ -47,7 +49,7 @@ export function Header() {
           <Actions 
             mobileMenuOpen={mobileMenuOpen} 
             setMobileMenuOpen={setMobileMenuOpen}
-            setShowDownloadModal={setShowDownloadModal}
+            handleDownloadApp={handleDownloadApp}
           />
         </div>
       
@@ -66,9 +68,6 @@ export function Header() {
         </div>
       )}
       </header>
-      
-      {/* Download App Modal */}
-      <DownloadAppModal isOpen={showDownloadModal} onClose={() => setShowDownloadModal(false)} />
     </>
   );
 }
@@ -116,14 +115,14 @@ function Logo() {
   );
 }
 
-function Actions({ mobileMenuOpen, setMobileMenuOpen, setShowDownloadModal }: { mobileMenuOpen: boolean; setMobileMenuOpen: (open: boolean) => void; setShowDownloadModal: (show: boolean) => void }) {
+function Actions({ mobileMenuOpen, setMobileMenuOpen, handleDownloadApp }: { mobileMenuOpen: boolean; setMobileMenuOpen: (open: boolean) => void; handleDownloadApp: () => void }) {
   return (
     <div className="flex items-center gap-[60px] shrink-0">
       <Navigation />
       <div className="hidden lg:flex items-center gap-[20px]">
         <LanguageButton />
         {/* <ContactButton /> */}
-        <DownloadAppButton setShowDownloadModal={setShowDownloadModal} />
+        <DownloadAppButton handleDownloadApp={handleDownloadApp} />
         <InvestButton />
       </div>
       <MenuButton mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
@@ -165,10 +164,10 @@ function LanguageButton() {
 //   );
 // }
 
-function DownloadAppButton({ setShowDownloadModal }: { setShowDownloadModal: (show: boolean) => void }) {
+function DownloadAppButton({ handleDownloadApp }: { handleDownloadApp: () => void }) {
   return (
     <button 
-      onClick={() => setShowDownloadModal(true)}
+      onClick={handleDownloadApp}
       className="flex items-center justify-center gap-[5px] h-[50px] px-[20px] py-[5px] rounded-[20px] bg-[rgba(44,70,83,0.05)] hover:bg-[rgba(44,70,83,0.1)] transition-colors"
     >
       <span className="text-[#5DBA47] text-[18px] font-bold whitespace-nowrap">حمّل التطبيق</span>

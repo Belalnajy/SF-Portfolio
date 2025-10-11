@@ -18,18 +18,33 @@ export function FAQ() {
 
         {/* FAQ Items */}
         <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-[20px] max-w-full sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] mx-auto">
-          <FAQItem question="هل أحتاج أن أكون خبيرًا بالتقنية؟" />
-          <FAQItem question="هل ستؤثر الخدمة على وظيفة الكاشير؟" />
-          <FAQItem question="هل هناك رسوم إضافية؟" />
-          <FAQItem question="هل يمكنني الدفع نقدًا أو ببطاقتي؟" />
-          <FAQItem question="هل أحتاج إلى إنترنت لاستخدام التطبيق؟" />
+          <FAQItem 
+            question="هل أحتاج أن أكون خبيرًا بالتقنية؟" 
+            answer="لا، أبدًا. تطبيق S&F صُمم ليكون سهل وبديهي. كل ما تحتاجه فقط هو جوالك وكاميرته لمسح الباركود، وسيُرشدك التطبيق خطوة بخطوة لتكمل عملية التسوق والدفع بسهولة."
+          />
+          <FAQItem 
+            question="هل ستؤثر الخدمة على وظيفة الكاشير؟" 
+            answer="بالعكس، التطبيق يساعد الكاشير في تقليل الضغط وتحسين سرعة الخدمة. يصبح الكاشير أكثر كفاءة وينجز وقت أكبر بعدد عملاء أكثر، مما يرفع إنتاجية المتجر وكفاءة الموظفين بنسبة تفوق 80%."
+          />
+          <FAQItem 
+            question="هل هناك رسوم إضافية على العميل؟" 
+            answer="لا، استخدام التطبيق مجاني تمامًا. لن تُفرض أي رسوم على العميل مقابل استخدام التطبيق أو الدفع عبره، بل على العكس — ستكسب عروض خاصة ونقاط ولاء وكاش باك."
+          />
+          <FAQItem 
+            question="هل يمكنني الدفع نقدًا أو ببطاقتي؟" 
+            answer="نعم، يمكنك الدفع بأي طريقة تناسبك: نقدًا عند الكاشير أو عبر التطبيق باستخدام مدى أو Apple Pay أو STC Pay. الهدف هو راحة العميل وسرعة الدفع بالطريقة التي يفضلها."
+          />
+          <FAQItem 
+            question="هل أحتاج إلى إنترنت لاستخدام التطبيق؟" 
+            answer="نعم، فقط في المرحلة الأولى يحتاج التطبيق إلى اتصال إنترنت بسيط لتحديث الأسعار والعروض وإرسال الفاتورة بعد الدفع. وفي المراحل القادمة سيتم دعم نظام شبكة داخلية في المتجر لتسريع التجربة أكثر."
+          />
         </div>
       </div>
     </section>
   );
 }
 
-function FAQItem({ question }: { question: string }) {
+function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -52,8 +67,8 @@ function FAQItem({ question }: { question: string }) {
         
         {isOpen && (
           <div className="mt-3 sm:mt-4 pr-6 sm:pr-8 text-right">
-            <p className="text-[rgba(44,70,83,0.7)] text-xs sm:text-sm md:text-base lg:text-[16px]">
-              نعم، التطبيق سهل الاستخدام ولا يتطلب خبرة تقنية. كل ما تحتاجه هو هاتف ذكي واتصال بالإنترنت.
+            <p className="text-[rgba(44,70,83,0.7)] text-xs sm:text-sm md:text-base lg:text-[16px] leading-relaxed">
+              {answer}
             </p>
           </div>
         )}

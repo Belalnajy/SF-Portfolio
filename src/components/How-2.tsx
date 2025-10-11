@@ -1,4 +1,5 @@
 import svgPaths from "./svg-j8hh0czyyu";
+import { ShoppingCart } from "lucide-react";
 
 function Title() {
   return (
@@ -21,18 +22,9 @@ function Done() {
           <g id="done">
             <rect fill="var(--fill-0, #5DBA47)" height="55" rx="27.5" width="55" x="2.5" y="2.5" />
             <rect height="55" rx="27.5" stroke="var(--stroke-0, #FCFCFC)" strokeWidth="5" width="55" x="2.5" y="2.5" />
-            <g id="icon">
-              <path d={svgPaths.p2f984200} fill="var(--fill-0, #FCFCFC)" />
-              <path d={svgPaths.p2d85a180} fill="var(--fill-0, #FCFCFC)" />
-              <path clipRule="evenodd" d={svgPaths.p275ff180} fill="var(--fill-0, #FCFCFC)" fillRule="evenodd" />
-              <path clipRule="evenodd" d={svgPaths.p37c20780} fill="var(--fill-0, #FCFCFC)" fillRule="evenodd" />
-              <path d={svgPaths.p3e5c7e00} fill="var(--fill-0, #FCFCFC)" />
-              <path clipRule="evenodd" d={svgPaths.p27170600} fill="var(--fill-0, #FCFCFC)" fillRule="evenodd" />
-              <path d={svgPaths.p3b2778e0} fill="var(--fill-0, #FCFCFC)" />
-              <path d={svgPaths.p11c61100} fill="var(--fill-0, #FCFCFC)" />
-              <path d={svgPaths.p13c52080} fill="var(--fill-0, #FCFCFC)" />
-              <path d={svgPaths.p2a9bc00} fill="var(--fill-0, #FCFCFC)" />
-            </g>
+            <foreignObject x="15" y="15" width="30" height="30">
+              <ShoppingCart className="w-full h-full text-white" strokeWidth={2} />
+            </foreignObject>
           </g>
         </svg>
       </div>

@@ -1,10 +1,11 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import DownloadAppModal from "./DownloadAppModal";
 
 export function Hero() {
-  const [showDownloadModal, setShowDownloadModal] = useState(false);
   const navigate = useNavigate();
+  
+  const handleDownloadApp = () => {
+    window.open('https://docs.google.com/forms/d/1LiQrZB2muwkIZRAyfhvkXgIy0xNo8n9KvQTgfla4zbM/edit?usp=drivesdk', '_blank');
+  };
 
   return (
     <>
@@ -41,7 +42,7 @@ export function Hero() {
             {/* Buttons */}
             <div className="flex flex-col gap-[15px] w-full max-w-[320px]">
               <button 
-                onClick={() => setShowDownloadModal(true)}
+                onClick={handleDownloadApp}
                 className="flex items-center justify-center h-[60px] w-full px-[20px] rounded-[12px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors shadow-md"
               >
                 <span className="text-white text-[18px] font-bold">
@@ -109,7 +110,7 @@ export function Hero() {
                   </span>
                 </button>
                 <button 
-                  onClick={() => setShowDownloadModal(true)}
+                  onClick={handleDownloadApp}
                   className="flex items-center justify-center h-[75px] w-[260px] px-[20px] py-[5px] rounded-[15px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors"
                 >
                   <span className="text-white text-[20px] font-bold whitespace-nowrap">
@@ -123,9 +124,6 @@ export function Hero() {
           </div>
         </div>
       </section>
-      
-      {/* Download App Modal */}
-      <DownloadAppModal isOpen={showDownloadModal} onClose={() => setShowDownloadModal(false)} />
     </>
   );
 }
