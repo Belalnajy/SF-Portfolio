@@ -24,39 +24,46 @@ A modern, responsive landing page for Smart & Fast Shopping application, built w
 ## Components Overview
 
 ### Header
+
 - Responsive navigation with logo
 - Language selector
 - Contact and investment CTAs
 - Mobile menu button
 
 ### Hero
+
 - Main headline and value proposition
 - Illustration
 - Primary CTAs
 - Decorative background elements
 
 ### AboutSection
+
 - App description
 - Phone mockup with decorative elements
 - Highlights key features
 
 ### HowItWorks
+
 - 6-step process visualization
 - Icon-based step cards
 - Connection line animation (desktop)
 - Bottom CTA
 
 ### FAQ
+
 - Collapsible accordion items
 - 5 common questions
 - Smooth expand/collapse animations
 
 ### Partners
+
 - Responsive grid layout
 - Partner logo cards
 - Hover effects
 
 ### Footer
+
 - Multi-column layout
 - Social media links
 - Company information
@@ -64,7 +71,7 @@ A modern, responsive landing page for Smart & Fast Shopping application, built w
 
 ## Design Features
 
-- **Colors**: 
+- **Colors**:
   - Primary: #5dba47 (Green)
   - Dark: #2c4653 (Navy)
   - Background: White with subtle gradients

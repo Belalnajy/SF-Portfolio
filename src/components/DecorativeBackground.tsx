@@ -1,5 +1,5 @@
-import React from "react";
-import svgPaths from "../imports/svg-smqeqw6krr";
+import React from 'react';
+import svgPaths from '../imports/svg-smqeqw6krr';
 
 export default function DecorativeBackground() {
   return (

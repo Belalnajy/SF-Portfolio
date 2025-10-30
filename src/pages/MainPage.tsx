@@ -1,36 +1,36 @@
-import {Hero} from "../components/Hero";
-import {AboutSection} from "../components/AboutSection";
-import HowItWorks from "../components/HowItWorks";
-import {FAQ} from "../components/FAQ";
-import {Partners} from "../components/Partners";
-import Footer from "../components/Footer";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { Hero } from '../components/Hero';
+import { AboutSection } from '../components/AboutSection';
+import HowItWorks from '../components/HowItWorks';
+import { FAQ } from '../components/FAQ';
+import { Partners } from '../components/Partners';
+import Footer from '../components/Footer';
+import { motion, useScroll, useSpring } from 'framer-motion';
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   // Animation variants for sections
   const sectionVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50 
+    hidden: {
+      opacity: 0,
+      y: 50,
     },
-    visible: { 
-      opacity: 1, 
-      y: 0
-    }
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
   };
 
   const staggerContainer = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1
-    }
+      opacity: 1,
+    },
   };
 
   return (
@@ -41,16 +41,12 @@ export default function HomePage() {
         style={{ scaleX }}
       />
 
-      <motion.main
-        variants={staggerContainer}
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.main variants={staggerContainer} initial="hidden" animate="visible">
         {/* Hero Section - Fade in from top */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <Hero />
         </motion.div>
