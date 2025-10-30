@@ -29,6 +29,7 @@ export default function AboutHero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="mt-8 bg-[#5dba47] text-white px-22 py-6 rounded-lg font-bold text-lg hover:bg-[#4da839] transition-colors"
+              onClick={() => (window.location.href = '/store-form')}
             >
               تواصل معنا
             </motion.button>
