@@ -1,11 +1,8 @@
-import svgPaths from "./svg-quo2y0koaf";
+import svgPaths from './svg-quo2y0koaf';
 
 function Logo() {
   return (
-    <div
-      className="h-[55px] relative shrink-0 w-[152px]"
-      data-name="logo"
-    >
+    <div className="h-[55px] relative shrink-0 w-[152px]" data-name="logo">
       <div className="absolute bottom-0 left-0 right-[-85.53%] top-0">
         <svg
           className="block size-full"
@@ -15,10 +12,7 @@ function Logo() {
         >
           <g id="logo">
             <g id="letters">
-              <path
-                d={svgPaths.p1023cef0}
-                fill="var(--fill-0, #2C4653)"
-              />
+              <path d={svgPaths.p1023cef0} fill="var(--fill-0, #2C4653)" />
               <path
                 clipRule="evenodd"
                 d={svgPaths.p3ce77300}
@@ -63,18 +57,9 @@ function Logo() {
               <path d={svgPaths.p3acc7300} fill="#5DBA47" />
               <path d={svgPaths.p1c1f1180} fill="#5DBA47" />
               <path d={svgPaths.p208afd00} fill="#5DBA47" />
-              <path
-                d="M178 25H181V28H178V25Z"
-                fill="var(--fill-0, #2C4653)"
-              />
-              <path
-                d="M173 25H176V28H173V25Z"
-                fill="var(--fill-0, #2C4653)"
-              />
-              <path
-                d="M168 25H171V28H168V25Z"
-                fill="var(--fill-0, #2C4653)"
-              />
+              <path d="M178 25H181V28H178V25Z" fill="var(--fill-0, #2C4653)" />
+              <path d="M173 25H176V28H173V25Z" fill="var(--fill-0, #2C4653)" />
+              <path d="M168 25H171V28H168V25Z" fill="var(--fill-0, #2C4653)" />
             </g>
           </g>
         </svg>
@@ -87,12 +72,7 @@ function Group() {
   return (
     <div className="absolute inset-[8.33%]" data-name="Group">
       <div className="absolute inset-[-4.5%]">
-        <svg
-          className="block size-full"
-          fill="none"
-          preserveAspectRatio="none"
-          viewBox="0 0 19 19"
-        >
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19 19">
           <g id="Group">
             <path
               d={svgPaths.p8be7b80}
@@ -122,10 +102,7 @@ function Group() {
 
 function SolarGlobalLinear() {
   return (
-    <div
-      className="overflow-clip relative shrink-0 size-[20px]"
-      data-name="solar:global-linear"
-    >
+    <div className="overflow-clip relative shrink-0 size-[20px]" data-name="solar:global-linear">
       <Group />
     </div>
   );
@@ -195,17 +172,9 @@ function Buttons() {
 
 function Mainlist() {
   return (
-    <div
-      className="h-[22px] relative shrink-0 w-[30px]"
-      data-name="mainlist"
-    >
+    <div className="h-[22px] relative shrink-0 w-[30px]" data-name="mainlist">
       <div className="absolute inset-[-5.68%_-4.17%]">
-        <svg
-          className="block size-full"
-          fill="none"
-          preserveAspectRatio="none"
-          viewBox="0 0 34 26"
-        >
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 34 26">
           <g id="mainlist">
             <path
               d="M2 2H32"
@@ -415,23 +384,11 @@ function Nav3() {
 
 function Facebook() {
   return (
-    <div
-      className="relative shrink-0 size-[34px]"
-      data-name="facebook"
-    >
-      <svg
-        className="block size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 34 34"
-      >
+    <div className="relative shrink-0 size-[34px]" data-name="facebook">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 34 34">
         <g id="facebook">
           <g id="Ellipse 2520"></g>
-          <path
-            d={svgPaths.p12e5b600}
-            fill="var(--fill-0, #F9F9F9)"
-            id="Vector"
-          />
+          <path d={svgPaths.p12e5b600} fill="var(--fill-0, #F9F9F9)" id="Vector" />
         </g>
       </svg>
     </div>
@@ -440,34 +397,14 @@ function Facebook() {
 
 function Insta() {
   return (
-    <div
-      className="relative shrink-0 size-[34px]"
-      data-name="insta"
-    >
-      <svg
-        className="block size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 34 34"
-      >
+    <div className="relative shrink-0 size-[34px]" data-name="insta">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 34 34">
         <g id="insta">
           <g id="Ellipse 2521"></g>
           <g id="Group 1000004257">
-            <path
-              d={svgPaths.pd404280}
-              fill="var(--fill-0, #F9F9F9)"
-              id="Vector (Stroke)"
-            />
-            <path
-              d={svgPaths.p3bdfce00}
-              fill="var(--fill-0, #F9F9F9)"
-              id="Vector (Stroke)_2"
-            />
-            <path
-              d={svgPaths.p1a1cb2c0}
-              fill="var(--fill-0, #F9F9F9)"
-              id="Vector"
-            />
+            <path d={svgPaths.pd404280} fill="var(--fill-0, #F9F9F9)" id="Vector (Stroke)" />
+            <path d={svgPaths.p3bdfce00} fill="var(--fill-0, #F9F9F9)" id="Vector (Stroke)_2" />
+            <path d={svgPaths.p1a1cb2c0} fill="var(--fill-0, #F9F9F9)" id="Vector" />
           </g>
         </g>
       </svg>
@@ -477,16 +414,8 @@ function Insta() {
 
 function X() {
   return (
-    <div
-      className="relative shrink-0 size-[34px]"
-      data-name="x"
-    >
-      <svg
-        className="block size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 34 34"
-      >
+    <div className="relative shrink-0 size-[34px]" data-name="x">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 34 34">
         <g id="x">
           <g id="Ellipse 2522"></g>
           <path
@@ -505,27 +434,13 @@ function X() {
 
 function Whatsapp() {
   return (
-    <div
-      className="relative shrink-0 size-[34px]"
-      data-name="whatsapp"
-    >
-      <svg
-        className="block size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 34 34"
-      >
+    <div className="relative shrink-0 size-[34px]" data-name="whatsapp">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 34 34">
         <g id="whatsapp">
           <g id="Ellipse 2523"></g>
           <g id="Vector">
-            <path
-              d={svgPaths.pb22800}
-              fill="var(--fill-0, #F9F9F9)"
-            />
-            <path
-              d={svgPaths.p6d7c900}
-              fill="var(--fill-0, #F9F9F9)"
-            />
+            <path d={svgPaths.pb22800} fill="var(--fill-0, #F9F9F9)" />
+            <path d={svgPaths.p6d7c900} fill="var(--fill-0, #F9F9F9)" />
           </g>
         </g>
       </svg>
@@ -535,23 +450,11 @@ function Whatsapp() {
 
 function Tiktok() {
   return (
-    <div
-      className="relative shrink-0 size-[34px]"
-      data-name="tiktok"
-    >
-      <svg
-        className="block size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 34 34"
-      >
+    <div className="relative shrink-0 size-[34px]" data-name="tiktok">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 34 34">
         <g id="tiktok">
           <g id="Ellipse 2524"></g>
-          <path
-            d={svgPaths.p130ff780}
-            fill="var(--fill-0, #F9F9F9)"
-            id="Vector"
-          />
+          <path d={svgPaths.p130ff780} fill="var(--fill-0, #F9F9F9)" id="Vector" />
         </g>
       </svg>
     </div>
@@ -592,10 +495,7 @@ function Nav4() {
 
 function Logo1() {
   return (
-    <div
-      className="absolute h-[67px] left-[40px] top-[89px] w-[186px]"
-      data-name="logo"
-    >
+    <div className="absolute h-[67px] left-[40px] top-[89px] w-[186px]" data-name="logo">
       <div className="absolute bottom-0 left-0 right-[-67.2%] top-0">
         <svg
           className="block size-full"
@@ -605,10 +505,7 @@ function Logo1() {
         >
           <g id="logo">
             <g id="letters">
-              <path
-                d={svgPaths.p1bec2500}
-                fill="var(--fill-0, white)"
-              />
+              <path d={svgPaths.p1bec2500} fill="var(--fill-0, white)" />
               <path
                 clipRule="evenodd"
                 d={svgPaths.p10ee4900}
@@ -653,18 +550,9 @@ function Logo1() {
               <path d={svgPaths.p1b66e800} fill="#5DBA47" />
               <path d={svgPaths.p35beaf80} fill="#5DBA47" />
               <path d={svgPaths.p2058bb70} fill="#5DBA47" />
-              <path
-                d="M207 37H210V40H207V37Z"
-                fill="var(--fill-0, white)"
-              />
-              <path
-                d="M202 37H205V40H202V37Z"
-                fill="var(--fill-0, white)"
-              />
-              <path
-                d="M197 37H200V40H197V37Z"
-                fill="var(--fill-0, white)"
-              />
+              <path d="M207 37H210V40H207V37Z" fill="var(--fill-0, white)" />
+              <path d="M202 37H205V40H202V37Z" fill="var(--fill-0, white)" />
+              <path d="M197 37H200V40H197V37Z" fill="var(--fill-0, white)" />
             </g>
           </g>
         </svg>
@@ -712,10 +600,7 @@ function Title() {
 
 function Input() {
   return (
-    <div
-      className="h-[65px] relative rounded-[15px] shrink-0 w-full"
-      data-name="INPUT"
-    >
+    <div className="h-[65px] relative rounded-[15px] shrink-0 w-full" data-name="INPUT">
       <div
         aria-hidden="true"
         className="absolute border border-[rgba(44,70,83,0.2)] border-solid inset-0 pointer-events-none rounded-[15px]"
@@ -728,10 +613,7 @@ function Input() {
           >
             الأسم الرباعي
           </p>
-          <div
-            className="h-[26px] relative shrink-0 w-[22px]"
-            data-name="Vector"
-          >
+          <div className="h-[26px] relative shrink-0 w-[22px]" data-name="Vector">
             <svg
               className="block size-full"
               fill="none"
@@ -771,10 +653,7 @@ function Input1() {
 
 function Input2() {
   return (
-    <div
-      className="h-[65px] relative rounded-[15px] shrink-0 w-full"
-      data-name="INPUT"
-    >
+    <div className="h-[65px] relative rounded-[15px] shrink-0 w-full" data-name="INPUT">
       <div
         aria-hidden="true"
         className="absolute border border-[rgba(44,70,83,0.2)] border-solid inset-0 pointer-events-none rounded-[15px]"
@@ -787,21 +666,14 @@ function Input2() {
           >
             أسم المتجر أو العلامة التجارية
           </p>
-          <div
-            className="h-[22px] relative shrink-0 w-[25px]"
-            data-name="Vector"
-          >
+          <div className="h-[22px] relative shrink-0 w-[25px]" data-name="Vector">
             <svg
               className="block size-full"
               fill="none"
               preserveAspectRatio="none"
               viewBox="0 0 25 22"
             >
-              <path
-                d={svgPaths.p273800}
-                fill="var(--fill-0, #5DBA47)"
-                id="Vector"
-              />
+              <path d={svgPaths.p273800} fill="var(--fill-0, #5DBA47)" id="Vector" />
             </svg>
           </div>
         </div>
@@ -829,22 +701,10 @@ function Input3() {
 
 function TdesignLocationFilled() {
   return (
-    <div
-      className="relative shrink-0 size-[25px]"
-      data-name="tdesign:location-filled"
-    >
-      <svg
-        className="block size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 25 25"
-      >
+    <div className="relative shrink-0 size-[25px]" data-name="tdesign:location-filled">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 25 25">
         <g id="tdesign:location-filled">
-          <path
-            d={svgPaths.p5d2a500}
-            fill="var(--fill-0, #5DBA47)"
-            id="Vector"
-          />
+          <path d={svgPaths.p5d2a500} fill="var(--fill-0, #5DBA47)" id="Vector" />
         </g>
       </svg>
     </div>
@@ -853,10 +713,7 @@ function TdesignLocationFilled() {
 
 function Input4() {
   return (
-    <div
-      className="h-[65px] relative rounded-[15px] shrink-0 w-full"
-      data-name="INPUT"
-    >
+    <div className="h-[65px] relative rounded-[15px] shrink-0 w-full" data-name="INPUT">
       <div
         aria-hidden="true"
         className="absolute border border-[rgba(44,70,83,0.2)] border-solid inset-0 pointer-events-none rounded-[15px]"
@@ -895,10 +752,7 @@ function Input5() {
 
 function Input6() {
   return (
-    <div
-      className="h-[65px] relative rounded-[15px] shrink-0 w-full"
-      data-name="INPUT"
-    >
+    <div className="h-[65px] relative rounded-[15px] shrink-0 w-full" data-name="INPUT">
       <div
         aria-hidden="true"
         className="absolute border border-[rgba(44,70,83,0.2)] border-solid inset-0 pointer-events-none rounded-[15px]"
@@ -940,17 +794,9 @@ function Input7() {
 
 function Group1() {
   return (
-    <div
-      className="h-[20.8px] relative shrink-0 w-[26px]"
-      data-name="Group"
-    >
+    <div className="h-[20.8px] relative shrink-0 w-[26px]" data-name="Group">
       <div className="absolute inset-[-4.33%_-3.46%]">
-        <svg
-          className="block size-full"
-          fill="none"
-          preserveAspectRatio="none"
-          viewBox="0 0 28 23"
-        >
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 28 23">
           <g id="Group">
             <path
               d={svgPaths.p1df93280}
@@ -981,10 +827,7 @@ function Group1() {
 
 function Input8() {
   return (
-    <div
-      className="h-[65px] relative rounded-[15px] shrink-0 w-full"
-      data-name="INPUT"
-    >
+    <div className="h-[65px] relative rounded-[15px] shrink-0 w-full" data-name="INPUT">
       <div
         aria-hidden="true"
         className="absolute border border-[rgba(44,70,83,0.2)] border-solid inset-0 pointer-events-none rounded-[15px]"
@@ -1083,10 +926,7 @@ function Input11() {
 
 function Input12() {
   return (
-    <div
-      className="h-[65px] relative rounded-[15px] shrink-0 w-full"
-      data-name="INPUT"
-    >
+    <div className="h-[65px] relative rounded-[15px] shrink-0 w-full" data-name="INPUT">
       <div
         aria-hidden="true"
         className="absolute border border-[rgba(44,70,83,0.2)] border-solid inset-0 pointer-events-none rounded-[15px]"
@@ -1099,10 +939,7 @@ function Input12() {
           >
             example @example.com
           </p>
-          <div
-            className="h-[20px] relative shrink-0 w-[26px]"
-            data-name="Vector"
-          >
+          <div className="h-[20px] relative shrink-0 w-[26px]" data-name="Vector">
             <svg
               className="block size-full"
               fill="none"
@@ -1142,10 +979,7 @@ function Input13() {
 
 function Input14() {
   return (
-    <div
-      className="h-[65px] relative rounded-[15px] shrink-0 w-full"
-      data-name="INPUT"
-    >
+    <div className="h-[65px] relative rounded-[15px] shrink-0 w-full" data-name="INPUT">
       <div
         aria-hidden="true"
         className="absolute border border-[rgba(44,70,83,0.2)] border-solid inset-0 pointer-events-none rounded-[15px]"
@@ -1158,10 +992,7 @@ function Input14() {
           >
             الصفة الوظيفية ف المتجر
           </p>
-          <div
-            className="h-[26px] relative shrink-0 w-[25px]"
-            data-name="Vector"
-          >
+          <div className="h-[26px] relative shrink-0 w-[25px]" data-name="Vector">
             <svg
               className="block size-full"
               fill="none"
@@ -1169,14 +1000,8 @@ function Input14() {
               viewBox="0 0 25 26"
             >
               <g id="Vector">
-                <path
-                  d={svgPaths.p32686280}
-                  fill="var(--fill-0, #5DBA47)"
-                />
-                <path
-                  d={svgPaths.pa455900}
-                  fill="var(--fill-0, #5DBA47)"
-                />
+                <path d={svgPaths.p32686280} fill="var(--fill-0, #5DBA47)" />
+                <path d={svgPaths.pa455900} fill="var(--fill-0, #5DBA47)" />
               </g>
             </svg>
           </div>
@@ -1210,10 +1035,7 @@ function Button() {
       data-name="button"
     >
       <div className="flex flex-col font-['Cairo:Bold',_sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-nowrap text-right text-white">
-        <p
-          className="leading-[normal] whitespace-pre"
-          dir="auto"
-        >
+        <p className="leading-[normal] whitespace-pre" dir="auto">
           إرسال الطلب
         </p>
       </div>
@@ -1223,24 +1045,10 @@ function Button() {
 
 function Left() {
   return (
-    <div
-      className="h-[19px] relative shrink-0 w-[8px]"
-      data-name="LEFT"
-    >
-      <svg
-        className="block size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 8 19"
-      >
+    <div className="h-[19px] relative shrink-0 w-[8px]" data-name="LEFT">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8 19">
         <g id="LEFT">
-          <circle
-            cx="4"
-            cy="15"
-            fill="var(--fill-0, #5DBA47)"
-            id="Ellipse 2525"
-            r="4"
-          />
+          <circle cx="4" cy="15" fill="var(--fill-0, #5DBA47)" id="Ellipse 2525" r="4" />
         </g>
       </svg>
     </div>
@@ -1258,8 +1066,7 @@ function Note() {
         dir="auto"
       >
         <span>{`انضم اليوم وامنح عملاءك تجربة تسوّق أسرع وأسهل مع `}</span>
-        <span className="font-['Cairo:Bold',_sans-serif] font-bold">{`S&F`}</span>
-        .
+        <span className="font-['Cairo:Bold',_sans-serif] font-bold">{`S&F`}</span>.
       </p>
       <Left />
     </div>
@@ -1268,24 +1075,10 @@ function Note() {
 
 function Left1() {
   return (
-    <div
-      className="h-[19px] relative shrink-0 w-[8px]"
-      data-name="LEFT"
-    >
-      <svg
-        className="block size-full"
-        fill="none"
-        preserveAspectRatio="none"
-        viewBox="0 0 8 19"
-      >
+    <div className="h-[19px] relative shrink-0 w-[8px]" data-name="LEFT">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8 19">
         <g id="LEFT">
-          <circle
-            cx="4"
-            cy="15"
-            fill="var(--fill-0, #5DBA47)"
-            id="Ellipse 2525"
-            r="4"
-          />
+          <circle cx="4" cy="15" fill="var(--fill-0, #5DBA47)" id="Ellipse 2525" r="4" />
         </g>
       </svg>
     </div>
@@ -1302,8 +1095,7 @@ function Note1() {
         className="font-['Cairo:Regular',_sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[15px] text-[rgba(44,70,83,0.8)] text-nowrap text-right whitespace-pre"
         dir="auto"
       >
-        كل خطوة نحو التحول الذكي تعني مبيعات أكثر ورضا أكبر
-        لعملائك.
+        كل خطوة نحو التحول الذكي تعني مبيعات أكثر ورضا أكبر لعملائك.
       </p>
       <Left1 />
     </div>
@@ -1338,21 +1130,18 @@ export default function StoreForm() {
       data-name="storeForm"
       style={{
         backgroundImage:
-          "linear-gradient(90deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)",
+          'linear-gradient(90deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)',
       }}
     >
       <div className="absolute flex h-[212px] items-center justify-center left-[-33px] top-[1714px] w-[262px]">
         <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-          <div
-            className="h-[212px] relative w-[262px]"
-            data-name="Vector"
-          >
+          <div className="h-[212px] relative w-[262px]" data-name="Vector">
             <div
               className="absolute bottom-[-0.47%] left-[-0.38%] right-0 top-[-0.47%]"
               style={
                 {
-                  "--fill-0": "rgba(93, 186, 71, 1)",
-                  "--stroke-0": "rgba(93, 186, 71, 1)",
+                  '--fill-0': 'rgba(93, 186, 71, 1)',
+                  '--stroke-0': 'rgba(93, 186, 71, 1)',
                 } as React.CSSProperties
               }
             >
@@ -1363,55 +1152,27 @@ export default function StoreForm() {
                 viewBox="0 0 263 214"
               >
                 <g id="Vector" opacity="0.1">
-                  <path
-                    d={svgPaths.p211cb0a0}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p10df6100}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p16f85700}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p2c6aa800}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p1917ff72}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.pc123c0}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p29f4d000}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.pfa46b80}
-                    stroke="var(--stroke-0, #5DBA47)"
-                    strokeWidth="2"
-                  />
+                  <path d={svgPaths.p211cb0a0} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p10df6100} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p16f85700} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p2c6aa800} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p1917ff72} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.pc123c0} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p29f4d000} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.pfa46b80} stroke="var(--stroke-0, #5DBA47)" strokeWidth="2" />
                 </g>
               </svg>
             </div>
           </div>
         </div>
       </div>
-      <div
-        className="absolute h-[275px] left-[1169px] top-[1263px] w-[340px]"
-        data-name="Vector"
-      >
+      <div className="absolute h-[275px] left-[1169px] top-[1263px] w-[340px]" data-name="Vector">
         <div
           className="absolute bottom-[-0.36%] left-[-0.29%] right-0 top-[-0.36%]"
           style={
             {
-              "--fill-0": "rgba(93, 186, 71, 1)",
-              "--stroke-0": "rgba(93, 186, 71, 1)",
+              '--fill-0': 'rgba(93, 186, 71, 1)',
+              '--stroke-0': 'rgba(93, 186, 71, 1)',
             } as React.CSSProperties
           }
         >
@@ -1422,55 +1183,27 @@ export default function StoreForm() {
             viewBox="0 0 341 277"
           >
             <g id="Vector" opacity="0.1">
-              <path
-                d={svgPaths.p60c8280}
-                fill="var(--fill-0, #5DBA47)"
-              />
-              <path
-                d={svgPaths.p138543f0}
-                fill="var(--fill-0, #5DBA47)"
-              />
-              <path
-                d={svgPaths.p26da6300}
-                fill="var(--fill-0, #5DBA47)"
-              />
-              <path
-                d={svgPaths.p11e44200}
-                fill="var(--fill-0, #5DBA47)"
-              />
-              <path
-                d={svgPaths.p15f8fc00}
-                fill="var(--fill-0, #5DBA47)"
-              />
-              <path
-                d={svgPaths.p38a91200}
-                fill="var(--fill-0, #5DBA47)"
-              />
-              <path
-                d={svgPaths.p260253f0}
-                fill="var(--fill-0, #5DBA47)"
-              />
-              <path
-                d={svgPaths.p3da95c70}
-                stroke="var(--stroke-0, #5DBA47)"
-                strokeWidth="2"
-              />
+              <path d={svgPaths.p60c8280} fill="var(--fill-0, #5DBA47)" />
+              <path d={svgPaths.p138543f0} fill="var(--fill-0, #5DBA47)" />
+              <path d={svgPaths.p26da6300} fill="var(--fill-0, #5DBA47)" />
+              <path d={svgPaths.p11e44200} fill="var(--fill-0, #5DBA47)" />
+              <path d={svgPaths.p15f8fc00} fill="var(--fill-0, #5DBA47)" />
+              <path d={svgPaths.p38a91200} fill="var(--fill-0, #5DBA47)" />
+              <path d={svgPaths.p260253f0} fill="var(--fill-0, #5DBA47)" />
+              <path d={svgPaths.p3da95c70} stroke="var(--stroke-0, #5DBA47)" strokeWidth="2" />
             </g>
           </svg>
         </div>
       </div>
       <div className="absolute flex h-[422px] items-center justify-center left-[-105px] top-[1157px] w-[522px]">
         <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-          <div
-            className="h-[422px] relative w-[522px]"
-            data-name="Vector"
-          >
+          <div className="h-[422px] relative w-[522px]" data-name="Vector">
             <div
               className="absolute bottom-[-0.24%] left-[-0.19%] right-0 top-[-0.24%]"
               style={
                 {
-                  "--fill-0": "rgba(93, 186, 71, 1)",
-                  "--stroke-0": "rgba(93, 186, 71, 1)",
+                  '--fill-0': 'rgba(93, 186, 71, 1)',
+                  '--stroke-0': 'rgba(93, 186, 71, 1)',
                 } as React.CSSProperties
               }
             >
@@ -1481,39 +1214,14 @@ export default function StoreForm() {
                 viewBox="0 0 523 424"
               >
                 <g id="Vector" opacity="0.1">
-                  <path
-                    d={svgPaths.p3f5938a0}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p37221780}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p386f9a00}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p13ef4c80}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p24d73240}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p24de6280}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p1b1f5880}
-                    fill="var(--fill-0, #5DBA47)"
-                  />
-                  <path
-                    d={svgPaths.p2279eef0}
-                    stroke="var(--stroke-0, #5DBA47)"
-                    strokeWidth="2"
-                  />
+                  <path d={svgPaths.p3f5938a0} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p37221780} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p386f9a00} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p13ef4c80} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p24d73240} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p24de6280} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p1b1f5880} fill="var(--fill-0, #5DBA47)" />
+                  <path d={svgPaths.p2279eef0} stroke="var(--stroke-0, #5DBA47)" strokeWidth="2" />
                 </g>
               </svg>
             </div>

@@ -1,20 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import svgPaths from "../imports/svg-ehumhacyno";
-import imgBanner from "/herostorebanner.png";
+import svgPaths from '../imports/svg-ehumhacyno';
+import imgBanner from '/herostorebanner.png';
 
 export default function HeroStore() {
   const navigate = useNavigate();
 
   return (
     <section className="relative h-[450px] sm:h-[550px] lg:h-[600px] w-full overflow-hidden mt-12 md:mt-0">
-   
       <div className="absolute inset-0">
-        <img 
-          src={imgBanner} 
-          alt="Shopping store background" 
-          className="size-full object-cover"
-        />
+        <img src={imgBanner} alt="Shopping store background" className="size-full object-cover" />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-l from-[rgba(0,0,0,0.4)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.8)]" />
       </div>
@@ -40,22 +35,34 @@ export default function HeroStore() {
       {/* Content Container */}
       <div className="relative z-10 h-full flex flex-col lg:flex-row" dir="rtl">
         {/* Mobile Layout */}
-        <div className="lg:hidden flex flex-col justify-center items-start text-right px-5 py-16 space-y-8" dir="rtl">
+        <div
+          className="lg:hidden flex flex-col justify-center items-start text-right px-5 py-16 space-y-8"
+          dir="rtl"
+        >
           <div className="space-y-2">
-            <h1 className="text-[26px] sm:text-[28px] text-[#5dba47] font-bold leading-tight" dir="rtl">
+            <h1
+              className="text-[26px] sm:text-[28px] text-[#5dba47] font-bold leading-tight"
+              dir="rtl"
+            >
               لأن عميلك أغلى...
             </h1>
             <h2 className="text-[20px] sm:text-[22px] text-white font-medium" dir="rtl">
               اجعل رحلته في متجرك أذكى وأريح
             </h2>
-          <div className="space-y-3 text-[15px] sm:text-[16px] text-white/90 leading-relaxed max-w-[350px]" dir="rtl">
-            <p>هل سئمت من رؤية العملاء يتركون عرباتهم بسبب الطوابير الطويلة؟</p>
-            <p>المنافسة لم تعد بالسعر فقط، بل بالتجربة. نحن نقدم لك حلًا تقنيًا متكاملًا يرفع مبيعاتك ويزيد ولاء عملائك.</p>
+            <div
+              className="space-y-3 text-[15px] sm:text-[16px] text-white/90 leading-relaxed max-w-[350px]"
+              dir="rtl"
+            >
+              <p>هل سئمت من رؤية العملاء يتركون عرباتهم بسبب الطوابير الطويلة؟</p>
+              <p>
+                المنافسة لم تعد بالسعر فقط، بل بالتجربة. نحن نقدم لك حلًا تقنيًا متكاملًا يرفع
+                مبيعاتك ويزيد ولاء عملائك.
+              </p>
+            </div>
           </div>
-          </div>
-          <button 
+          <button
             onClick={() => navigate('/store-form')}
-            className="bg-[#5dba47] hover:bg-[#4da339] text-white font-semibold px-8 py-4 rounded-[20px] text-[16px] sm:text-[18px] transition-all duration-300" 
+            className="bg-[#5dba47] hover:bg-[#4da339] text-white font-semibold px-8 py-4 rounded-[20px] text-[16px] sm:text-[18px] transition-all duration-300"
             dir="rtl"
           >
             كن شريك نجاح
@@ -64,7 +71,10 @@ export default function HeroStore() {
 
         {/* Desktop Layout */}
         <div className="hidden lg:flex w-full">
-          <div className="flex-1 flex flex-col justify-center items-start pr-12 xl:pr-16 space-y-8" dir="rtl">
+          <div
+            className="flex-1 flex flex-col justify-center items-start pr-12 xl:pr-16 space-y-8"
+            dir="rtl"
+          >
             <div className="space-y-3 text-right" dir="rtl">
               <h1 className="text-[32px] xl:text-[35px] text-[#5dba47] font-bold leading-tight">
                 لأن عميلك أغلى...
@@ -73,12 +83,18 @@ export default function HeroStore() {
                 اجعل رحلته في متجرك أذكى وأريح
               </h2>
             </div>
-            <div className="space-y-4 text-[20px] xl:text-[24px] text-white/80 leading-relaxed text-right" dir="rtl">
+            <div
+              className="space-y-4 text-[20px] xl:text-[24px] text-white/80 leading-relaxed text-right"
+              dir="rtl"
+            >
               <p>هل سئمت من رؤية العملاء يتركون عرباتهم بسبب الطوابير الطويلة؟</p>
-              <p>المنافسة لم تعد بالسعر فقط، بل بالتجربة. نحن نقدم لك حلًا تقنيًا متكاملًا يرفع مبيعاتك ويزيد ولاء عملائك.</p>
+              <p>
+                المنافسة لم تعد بالسعر فقط، بل بالتجربة. نحن نقدم لك حلًا تقنيًا متكاملًا يرفع
+                مبيعاتك ويزيد ولاء عملائك.
+              </p>
             </div>
             <div className="text-right">
-              <button 
+              <button
                 onClick={() => navigate('/store-form')}
                 className="bg-[#5dba47] hover:bg-[#4da339] text-white font-bold px-10 py-5 rounded-[20px] text-[18px] xl:text-[21px] transition-all duration-300"
               >

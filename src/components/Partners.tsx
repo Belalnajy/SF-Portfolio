@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export function Partners() {
   return (
@@ -17,57 +17,57 @@ export function Partners() {
         {/* Partners Grid */}
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8">
           <PartnerCard>
-            <img 
+            <img
               src="/Partners/panda.png"
-              alt="Panda Markets" 
+              alt="Panda Markets"
               className="object-contain w-full h-full"
             />
           </PartnerCard>
 
           <PartnerCard>
-            <img 
-              src="/Partners/centrepoint.png" 
-              alt="Partner 2" 
-              className="object-contain w-full h-full"
-            />  
-          </PartnerCard>
-
-          <PartnerCard>
-            <img 
-              src="/Partners/othaim.png" 
-              alt="أسواق العثيم" 
+            <img
+              src="/Partners/centrepoint.png"
+              alt="Partner 2"
               className="object-contain w-full h-full"
             />
           </PartnerCard>
 
           <PartnerCard>
-            <img 
-              src="/Partners/carrefour.png" 
-              alt="Carrefour" 
+            <img
+              src="/Partners/othaim.png"
+              alt="أسواق العثيم"
               className="object-contain w-full h-full"
             />
           </PartnerCard>
 
           <PartnerCard>
-            <img 
-              src="/Partners/jarir.png" 
-              alt="Partner 5" 
+            <img
+              src="/Partners/carrefour.png"
+              alt="Carrefour"
               className="object-contain w-full h-full"
             />
           </PartnerCard>
 
           <PartnerCard>
-            <img 
-              src="/Partners/raya.png" 
-              alt="Partner 6" 
+            <img
+              src="/Partners/jarir.png"
+              alt="Partner 5"
               className="object-contain w-full h-full"
             />
           </PartnerCard>
 
           <PartnerCard>
-            <img 
-              src="/Partners/dukan.png" 
-              alt="Partner 7"   
+            <img
+              src="/Partners/raya.png"
+              alt="Partner 6"
+              className="object-contain w-full h-full"
+            />
+          </PartnerCard>
+
+          <PartnerCard>
+            <img
+              src="/Partners/dukan.png"
+              alt="Partner 7"
               className="object-contain w-full h-full"
             />
           </PartnerCard>
