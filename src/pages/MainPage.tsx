@@ -2,9 +2,11 @@ import { Hero } from '../components/Hero';
 import { AboutSection } from '../components/AboutSection';
 import HowItWorks from '../components/HowItWorks';
 import { FAQ } from '../components/FAQ';
-import { Partners } from '../components/Partners';
+import { ComingSoonPartners } from '../components/ComingSoonPartners';
 import Footer from '../components/Footer';
 import { motion, useScroll, useSpring } from 'framer-motion';
+import FeaturesSection from '@/components/FeaturesSection';
+import ArticlesSection from '@/components/ArticlesSection';
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll();
@@ -73,6 +75,17 @@ export default function HomePage() {
           <HowItWorks />
         </motion.div>
 
+        {/* Features Section - Scroll triggered */}
+        <motion.div
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <FeaturesSection />
+        </motion.div>
+
         {/* FAQ - Scroll triggered with scale */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -83,7 +96,7 @@ export default function HomePage() {
           <FAQ />
         </motion.div>
 
-        {/* Partners - Scroll triggered */}
+        {/* Articles Section - Scroll triggered */}
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -91,7 +104,18 @@ export default function HomePage() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <Partners />
+          <ArticlesSection />
+        </motion.div>
+
+        {/* Coming Soon Partners Section - Scroll triggered */}
+        <motion.div
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <ComingSoonPartners />
         </motion.div>
       </motion.main>
 

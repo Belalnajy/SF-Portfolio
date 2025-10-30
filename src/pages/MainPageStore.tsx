@@ -6,6 +6,7 @@ import StatsItem from '../components/StatsItem';
 import ImageSection from '../components/ImageSection';
 import StoreTypesSidebar from '../components/StoreTypesSidebar';
 import PageDecorations from '../components/PageDecorations';
+import StoreBenefitsSection from '../components/StoreBenefitsSection';
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 export default function StorePage() {
@@ -223,6 +224,17 @@ export default function StorePage() {
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Store Benefits Section */}
+      <motion.div
+        className="relative mt-[140px] md:mt-[140px]"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
+        <StoreBenefitsSection />
+      </motion.div>
 
       {/* Footer */}
       <div className="relative mt-[100px] md:mt-[200px]">

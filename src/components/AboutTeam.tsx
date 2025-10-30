@@ -45,7 +45,7 @@ export default function AboutTeam() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl lg:text-3xl font-bold text-[#2c4653] mb-4">فريق العمل</h2>
+          {/* <h2 className="text-2xl lg:text-3xl font-bold text-[#2c4653] mb-4">فريق العمل</h2>
           <p className="text-xl font-bold opacity-70 text-[#2c4653]/70 max-w-3xl mx-auto leading-relaxed">
             الكفاءات والخبرات التي تقف وراء نجاحنا
           </p>
@@ -53,15 +53,15 @@ export default function AboutTeam() {
             يتكون فريق Smart & Fast Shopping من مجموعة من الشباب الموهوبين في مجالات التقنية،
             والمالحين بتقديم منتج ذو قيمة للمجتمع. يعمل بروح واحدة لتحقيق هدف مشترك: جعل تجربة
             التسوق داخل المتاجر أذكى وأكثر خصوصية وراحة
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 max-w-8xl mx-auto">
+        {/* <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 max-w-8xl mx-auto">
           {teamMembers.map((member, index) => (
             <TeamCard key={index} member={member} index={index} />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
