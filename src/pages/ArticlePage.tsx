@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { BadgePercent, Check, ScanLine, TrendingUp } from 'lucide-react';
+import DecorativeBackground from '../components/DecorativeBackground';
 
 // Data Constants
 const DIGITAL_TRANSFORMATION_FEATURES = [
@@ -151,7 +152,10 @@ const ArticlePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white mt-[130px] " dir="rtl">
+    <div className="min-h-screen bg-white mt-[130px] relative" dir="rtl">
+      {/* Decorative Background */}
+      <DecorativeBackground />
+      
       {/* Hero Section */}
       <section className="relative h-[400px] md:h-[700px] overflow-hidden">
         <div className="absolute inset-0">
