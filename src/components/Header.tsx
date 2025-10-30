@@ -1,15 +1,18 @@
-import React from "react";
-import svgPaths from "../imports/svg-x8okmw8j48";
-import { Menu, X } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React from 'react';
+import svgPaths from '../imports/svg-x8okmw8j48';
+import { Menu, X } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  
+
   const handleDownloadApp = () => {
-    window.open('https://docs.google.com/forms/d/1LiQrZB2muwkIZRAyfhvkXgIy0xNo8n9KvQTgfla4zbM/edit?usp=drivesdk', '_blank');
+    window.open(
+      'https://docs.google.com/forms/d/1LiQrZB2muwkIZRAyfhvkXgIy0xNo8n9KvQTgfla4zbM/edit?usp=drivesdk',
+      '_blank'
+    );
   };
 
   // Close menu on scroll
@@ -43,30 +46,36 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-50 bg-white/80 backdrop-blur-sm z-[10000]" ref={menuRef}>
+      <header
+        className="fixed left-0 right-0 top-0 z-50 bg-white/80 backdrop-blur-sm z-[10000]"
+        ref={menuRef}
+      >
         <div className="container mx-auto flex items-center justify-between px-[40px] py-[37px]">
           <Logo />
-          <Actions 
-            mobileMenuOpen={mobileMenuOpen} 
+          <Actions
+            mobileMenuOpen={mobileMenuOpen}
             setMobileMenuOpen={setMobileMenuOpen}
             handleDownloadApp={handleDownloadApp}
           />
         </div>
-      
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 animate-in slide-in-from-top-2">
-          <div className="flex flex-col p-4 gap-3">
-            <MobileNavigation setMobileMenuOpen={setMobileMenuOpen} />
-            <div className="border-t border-gray-200 pt-3 mt-3 flex items-center gap-[20px]" dir="rtl">
-              <LanguageButton />
-              {/* <ContactButton /> */}
-              
-              <InvestButton />
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 animate-in slide-in-from-top-2">
+            <div className="flex flex-col p-4 gap-3">
+              <MobileNavigation setMobileMenuOpen={setMobileMenuOpen} />
+              <div
+                className="border-t border-gray-200 pt-3 mt-3 flex items-center gap-[20px]"
+                dir="rtl"
+              >
+                <LanguageButton />
+                {/* <ContactButton /> */}
+
+                <InvestButton />
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
       </header>
     </>
   );
@@ -76,7 +85,12 @@ function Logo() {
   return (
     <Link to="/" className="relative h-[55px] w-[152px] shrink-0 block">
       <div className="absolute bottom-0 left-0 right-[-57.24%] top-0">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 239 55">
+        <svg
+          className="block size-full"
+          fill="none"
+          preserveAspectRatio="none"
+          viewBox="0 0 239 55"
+        >
           <g id="logo">
             <g id="letters">
               <path d={svgPaths.p1023cef0} fill="#2C4653" />
@@ -115,7 +129,15 @@ function Logo() {
   );
 }
 
-function Actions({ mobileMenuOpen, setMobileMenuOpen, handleDownloadApp }: { mobileMenuOpen: boolean; setMobileMenuOpen: (open: boolean) => void; handleDownloadApp: () => void }) {
+function Actions({
+  mobileMenuOpen,
+  setMobileMenuOpen,
+  handleDownloadApp,
+}: {
+  mobileMenuOpen: boolean;
+  setMobileMenuOpen: (open: boolean) => void;
+  handleDownloadApp: () => void;
+}) {
   return (
     <div className="flex items-center gap-[60px] shrink-0">
       <Navigation />
@@ -133,11 +155,11 @@ function Actions({ mobileMenuOpen, setMobileMenuOpen, handleDownloadApp }: { mob
 function LanguageButton() {
   const toggleLanguage = () => {
     // TODO: Implement language switching logic
-    console.log("Language toggle clicked");
+    console.log('Language toggle clicked');
   };
 
   return (
-    <button 
+    <button
       onClick={toggleLanguage}
       className="flex items-center justify-center gap-[5px] h-[50px] px-[15px] py-[5px] rounded-[20px] bg-[rgba(44,70,83,0.05)] hover:bg-[rgba(44,70,83,0.1)] transition-colors"
     >
@@ -146,7 +168,12 @@ function LanguageButton() {
         <svg className="block size-full" fill="none" viewBox="0 0 19 19">
           <path d={svgPaths.p8be7b80} stroke="#1F84FF" strokeWidth="1.5" />
           <path d={svgPaths.p5be4a00} stroke="#1F84FF" strokeWidth="1.5" />
-          <path d="M1.00083 9.33375H17.6675" stroke="#1F84FF" strokeLinecap="round" strokeWidth="1.5" />
+          <path
+            d="M1.00083 9.33375H17.6675"
+            stroke="#1F84FF"
+            strokeLinecap="round"
+            strokeWidth="1.5"
+          />
         </svg>
       </div>
     </button>
@@ -155,7 +182,7 @@ function LanguageButton() {
 
 // function ContactButton() {
 //   return (
-//     <Link 
+//     <Link
 //       to="/store-form"
 //       className="flex items-center justify-center gap-[5px] h-[50px] px-[20px] py-[5px] rounded-[20px] hover:bg-[rgba(44,70,83,0.05)] transition-colors"
 //     >
@@ -166,7 +193,7 @@ function LanguageButton() {
 
 function DownloadAppButton({ handleDownloadApp }: { handleDownloadApp: () => void }) {
   return (
-    <button 
+    <button
       onClick={handleDownloadApp}
       className="flex items-center justify-center gap-[5px] h-[50px] px-[20px] py-[5px] rounded-[20px] bg-[rgba(44,70,83,0.05)] hover:bg-[rgba(44,70,83,0.1)] transition-colors"
     >
@@ -178,11 +205,11 @@ function DownloadAppButton({ handleDownloadApp }: { handleDownloadApp: () => voi
 function InvestButton() {
   const navigate = useNavigate();
   const handleInvest = () => {
-    navigate("/invest-main");
+    navigate('/invest-main');
   };
 
   return (
-    <button 
+    <button
       onClick={handleInvest}
       className="flex items-center justify-center gap-[5px] h-[50px] px-[20px] py-[5px] rounded-[20px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors"
     >
@@ -193,24 +220,25 @@ function InvestButton() {
 
 function Navigation() {
   const location = useLocation();
-  
+
   const navItems = [
-    { name: "الرئيسية", path: "/" },
-    { name: "المتاجر", path: "/store" },
-    { name: "من نحن", path: "/about" },
-    { name: "تواصل معنا", path: "/store-form" }
+    { name: 'الرئيسية', path: '/' },
+    { name: 'المتاجر', path: '/store' },
+    { name: 'من نحن', path: '/about' },
+    { name: 'المقالات', path: '/article' },
+    { name: 'تواصل معنا', path: '/store-form' },
   ];
 
   return (
-    <nav className="hidden lg:flex items-center gap-[30px] z-[100000000]" dir="rtl" >
-      {navItems.map((item) => (
+    <nav className="hidden lg:flex items-center gap-[30px] z-[100000000]" dir="rtl">
+      {navItems.map(item => (
         <Link
           key={item.path}
           to={item.path}
           className={`text-[18px] font-medium transition-colors hover:text-[#5dba47] ${
-            location.pathname === item.path 
-              ? "text-[#5dba47] border-b-2 border-[#5dba47] pb-1" 
-              : "text-[#2c4653]"
+            location.pathname === item.path
+              ? 'text-[#5dba47] border-b-2 border-[#5dba47] pb-1'
+              : 'text-[#2c4653]'
           }`}
         >
           {item.name}
@@ -222,25 +250,26 @@ function Navigation() {
 
 function MobileNavigation({ setMobileMenuOpen }: { setMobileMenuOpen: (open: boolean) => void }) {
   const location = useLocation();
-  
+
   const navItems = [
-    { name: "الرئيسية", path: "/" },
-    { name: "المتاجر", path: "/store" },
-    { name: "من نحن", path: "/about" },
-    { name: "تواصل معنا", path: "/store-form" }
+    { name: 'الرئيسية', path: '/' },
+    { name: 'المتاجر', path: '/store' },
+    { name: 'من نحن', path: '/about' },
+    { name: 'المقالات', path: '/article' },
+    { name: 'تواصل معنا', path: '/store-form' },
   ];
 
   return (
     <nav className="flex flex-col gap-2" dir="rtl">
-      {navItems.map((item) => (
+      {navItems.map(item => (
         <Link
           key={item.path}
           to={item.path}
           onClick={() => setMobileMenuOpen(false)}
           className={`text-[16px] font-medium py-2 px-3 rounded-lg transition-colors hover:bg-[rgba(44,70,83,0.05)] ${
-            location.pathname === item.path 
-              ? "text-[#5dba47] bg-[rgba(93,186,71,0.1)]" 
-              : "text-[#2c4653]"
+            location.pathname === item.path
+              ? 'text-[#5dba47] bg-[rgba(93,186,71,0.1)]'
+              : 'text-[#2c4653]'
           }`}
         >
           {item.name}
@@ -250,12 +279,18 @@ function MobileNavigation({ setMobileMenuOpen }: { setMobileMenuOpen: (open: boo
   );
 }
 
-function MenuButton({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean; setMobileMenuOpen: (open: boolean) => void }) {
+function MenuButton({
+  mobileMenuOpen,
+  setMobileMenuOpen,
+}: {
+  mobileMenuOpen: boolean;
+  setMobileMenuOpen: (open: boolean) => void;
+}) {
   return (
-    <button 
+    <button
       onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       className="md:hidden p-2 hover:bg-[rgba(44,70,83,0.05)] rounded-lg transition-colors"
-      aria-label={mobileMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
+      aria-label={mobileMenuOpen ? 'إغلاق القائمة' : 'فتح القائمة'}
     >
       {mobileMenuOpen ? (
         <X className="w-[30px] h-[22px] text-[#2C4653]" />

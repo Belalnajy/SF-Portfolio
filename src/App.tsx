@@ -1,16 +1,15 @@
-
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header";
-import HomePage from "./pages/MainPage";
-import StorePage from "./pages/MainPageStore";
-import InvestMainPage from "./pages/MainPageInvest";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import StorePageForm from "./pages/StorePageForm";
-import InvestPage from "./pages/InvestPage";
-import EmployeeForm from "./pages/EmployeeForm";
-import SuccessPage from "./pages/SuccessPage";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import HomePage from './pages/MainPage';
+import StorePage from './pages/MainPageStore';
+import InvestMainPage from './pages/MainPageInvest';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import StorePageForm from './pages/StorePageForm';
+import InvestPage from './pages/InvestPage';
+import EmployeeForm from './pages/EmployeeForm';
+import SuccessPage from './pages/SuccessPage';
+import ArticlePage from './pages/ArticlePage';
 
 export default function App() {
   return (
@@ -28,6 +27,7 @@ export default function App() {
           <Route path="/invest" element={<InvestPage />} />
           <Route path="/employee" element={<EmployeeForm />} />
           <Route path="/success" element={<SuccessPage />} />
+          <Route path="/article" element={<ArticlePage />} />
         </Routes>
       </div>
     </Router>
