@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import { User, Mail, Briefcase } from 'lucide-react';
+import { submitInvestmentRequest, formatApiErrors } from '../services/api';
 
 interface InvestPageProps {
   onSuccess?: () => void;
@@ -20,6 +21,7 @@ export default function InvestPage({ onSuccess }: InvestPageProps) {
     howDidYouHear: '',
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const investmentOptions = [
     { value: '10k', label: '$10k' },
@@ -53,14 +55,30 @@ export default function InvestPage({ onSuccess }: InvestPageProps) {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log('Form submitted:', formData);
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setErrors({});
+
+    try {
+      await submitInvestmentRequest(formData);
+      
       navigate('/success');
       if (onSuccess) {
         onSuccess();
       }
+    } catch (error: any) {
+      const apiErrors = formatApiErrors(error);
+      setErrors(apiErrors);
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -325,17 +343,29 @@ export default function InvestPage({ onSuccess }: InvestPageProps) {
               </div>
             </div>
 
+            {/* Error Message */}
+            {errors.general && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-[12px] text-right">
+                <p className="text-red-600 text-sm">{errors.general}</p>
+              </div>
+            )}
+
             {/* Submit Button */}
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-[#5dba47] h-[50px] md:h-[60px] lg:h-[65px] px-6 md:px-8 lg:px-[30px] py-3 md:py-[15px] rounded-[12px] md:rounded-[15px] w-full sm:w-[280px] md:w-[300px] hover:bg-[#4da338] transition-colors flex items-center justify-center"
+                disabled={isSubmitting}
+                className={`h-[50px] md:h-[60px] lg:h-[65px] px-6 md:px-8 lg:px-[30px] py-3 md:py-[15px] rounded-[12px] md:rounded-[15px] w-full sm:w-[280px] md:w-[300px] transition-colors flex items-center justify-center ${
+                  isSubmitting
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-[#5dba47] hover:bg-[#4da338]'
+                }`}
               >
                 <p
                   className="font-bold text-base md:text-lg lg:text-[18px] text-white text-center"
                   dir="auto"
                 >
-                  إرسال الطلب
+                  {isSubmitting ? 'جاري الإرسال...' : 'إرسال الطلب'}
                 </p>
               </button>
             </div>

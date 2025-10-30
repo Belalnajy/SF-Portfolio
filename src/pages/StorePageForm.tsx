@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
-import PageDecorations from '../components/PageDecorations';
 import { motion } from 'framer-motion';
 import { User, Briefcase, Mail, Store, Phone, MapPin } from 'lucide-react';
+import { submitStoreRequest, formatApiErrors } from '../services/api';
 // سأستخدم هذا للانتقال إلى صفحة النجاح
 interface FormPageProps {
   onSuccess?: () => void;
@@ -24,6 +24,7 @@ export default function StorePageForm({ onSuccess }: FormPageProps) {
   });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const storeTypes = ['سوبر ماركت', 'بقالة', 'مطعم', 'صيدلية', 'محل ملابس', 'أخرى'];
 
@@ -51,15 +52,32 @@ export default function StorePageForm({ onSuccess }: FormPageProps) {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log('Form submitted:', formData);
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setErrors({});
+
+    try {
+      await submitStoreRequest(formData);
+      
       // Navigate to success page
       navigate('/success');
       if (onSuccess) {
         onSuccess();
       }
+    } catch (error: any) {
+      const apiErrors = formatApiErrors(error);
+      setErrors(apiErrors);
+      
+      // Scroll to top to show errors
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -433,17 +451,29 @@ export default function StorePageForm({ onSuccess }: FormPageProps) {
               </div>
             </div>
 
+            {/* Error Message */}
+            {errors.general && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-[12px] text-right">
+                <p className="text-red-600 text-sm">{errors.general}</p>
+              </div>
+            )}
+
             {/* Submit Button */}
             <div className="flex justify-center mt-8 md:mt-12 lg:mt-[60px]">
               <button
                 type="submit"
-                className="bg-[#5dba47] h-[50px] md:h-[60px] lg:h-[65px] px-6 md:px-8 lg:px-[30px] py-3 md:py-[15px] rounded-[12px] md:rounded-[15px] w-full sm:w-[280px] md:w-[300px] hover:bg-[#4da338] transition-colors flex items-center justify-center"
+                disabled={isSubmitting}
+                className={`h-[50px] md:h-[60px] lg:h-[65px] px-6 md:px-8 lg:px-[30px] py-3 md:py-[15px] rounded-[12px] md:rounded-[15px] w-full sm:w-[280px] md:w-[300px] transition-colors flex items-center justify-center ${
+                  isSubmitting
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-[#5dba47] hover:bg-[#4da338]'
+                }`}
               >
                 <p
                   className="font-bold text-base md:text-lg lg:text-[18px] text-white text-center"
                   dir="auto"
                 >
-                  إرسال الطلب
+                  {isSubmitting ? 'جاري الإرسال...' : 'إرسال الطلب'}
                 </p>
               </button>
             </div>
