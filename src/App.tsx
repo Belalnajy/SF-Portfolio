@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
+import { ScrollToTop } from './components/ScrollToTop';
 import HomePage from './pages/MainPage';
 import StorePage from './pages/MainPageStore';
 import InvestMainPage from './pages/MainPageInvest';
@@ -14,6 +15,7 @@ import ArticlePage from './pages/ArticlePage';
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
         <Header />
         <Routes>
