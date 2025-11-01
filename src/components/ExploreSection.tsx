@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
 interface Article {
   image: string;
   title: string;
   description: string;
+  link: string;
 }
 
 const RELATED_ARTICLES: Article[] = [
@@ -11,21 +14,19 @@ const RELATED_ARTICLES: Article[] = [
     title: 'أهمية التحول الرقمي في عالم التسوق',
     description:
       'في عصر السرعة والتطور، أصبح التحول الرقمي أحد أهم العوامل التي غيّرت شكل عالم التسوق والتجارة الإلكترونية...',
+    link: '/article',
   },
   {
     image: '/article-page-section.png',
-    title: 'أهمية التحول الرقمي في عالم التسوق',
+    title: 'كيف يمكن للتقنية أن تحوّل تجربة العميل داخل المتجر؟',
     description:
-      'في عصر السرعة والتطور، أصبح التحول الرقمي أحد أهم العوامل التي غيّرت شكل عالم التسوق والتجارة الإلكترونية...',
-  },
-  {
-    image: '/article-page-section.png',
-    title: 'أهمية التحول الرقمي في عالم التسوق',
-    description:
-      'في عصر السرعة والتطور، أصبح التحول الرقمي أحد أهم العوامل التي غيّرت شكل عالم التسوق والتجارة الإلكترونية...',
+      'لم يعد العميل يبحث فقط عن منتج جيد، بل أصبح يبحث عن تجربة تسوق ذكية، سريعة، ومريحة. اكتشف كيف تغير التقنية مفهوم التسوق...',
+    link: '/article-vision-2030',
   },
 ];
+
 const ExploreSection = () => {
+  const navigate = useNavigate();
   return (
     <div>
       {/* Explore Future Section */}
@@ -54,6 +55,7 @@ const ExploreSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              onClick={() => navigate(article.link)}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group"
             >
               <div className="relative h-48 md:h-56 overflow-hidden">

@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 interface Article {
   image: string;
   title: string;
   description: string;
+  link: string;
 }
 
 const RELATED_ARTICLES: Article[] = [
@@ -12,22 +14,20 @@ const RELATED_ARTICLES: Article[] = [
     title: 'أهمية التحول الرقمي في عالم التسوق',
     description:
       'في عصر السرعة والتطور، أصبح التحول الرقمي أحد أهم العوامل التي غيّرت شكل عالم التسوق والتجارة الإلكترونية...',
+    link: '/article',
   },
   {
     image: '/article-page-section.png',
-    title: 'أهمية التحول الرقمي في عالم التسوق',
+    title: 'كيف يمكن للتقنية أن تحوّل تجربة العميل داخل المتجر؟',
     description:
-      'في عصر السرعة والتطور، أصبح التحول الرقمي أحد أهم العوامل التي غيّرت شكل عالم التسوق والتجارة الإلكترونية...',
-  },
-  {
-    image: '/article-page-section.png',
-    title: 'أهمية التحول الرقمي في عالم التسوق',
-    description:
-      'في عصر السرعة والتطور، أصبح التحول الرقمي أحد أهم العوامل التي غيّرت شكل عالم التسوق والتجارة الإلكترونية...',
+      'لم يعد العميل يبحث فقط عن منتج جيد، بل أصبح يبحث عن تجربة تسوق ذكية، سريعة، ومريحة. اكتشف كيف تغير التقنية مفهوم التسوق...',
+    link: '/article-vision-2030',
   },
 ];
 
 export default function ArticlesSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="container mx-auto py-12 md:py-16">
       <motion.div
@@ -55,6 +55,7 @@ export default function ArticlesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              onClick={() => navigate(article.link)}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group"
             >
               <div className="relative h-48 md:h-56 overflow-hidden">
@@ -74,6 +75,24 @@ export default function ArticlesSection() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* View All Articles Button */}
+        <div className="text-center mt-10 md:mt-12">
+          <button
+            onClick={() => navigate('/articles')}
+            className="bg-[#5DBA47] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#4da83d] transition-colors shadow-lg hover:shadow-xl inline-flex items-center gap-2"
+          >
+            <span>عرض جميع المقالات</span>
+            <svg
+              className="w-5 h-5 transform rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
         </div>
       </motion.div>
     </section>

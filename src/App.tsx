@@ -11,6 +11,8 @@ import InvestPage from './pages/InvestPage';
 import EmployeeForm from './pages/EmployeeForm';
 import SuccessPage from './pages/SuccessPage';
 import ArticlePage from './pages/ArticlePage';
+import Article2Page from './pages/Article2Page';
+import ArticlesListPage from './pages/ArticlesListPage';
 
 export default function App() {
   return (
@@ -29,7 +31,9 @@ export default function App() {
           <Route path="/invest" element={<InvestPage />} />
           <Route path="/employee" element={<EmployeeForm />} />
           <Route path="/success" element={<SuccessPage />} />
+          <Route path="/articles" element={<ArticlesListPage />} />
           <Route path="/article" element={<ArticlePage />} />
+          <Route path="/article-vision-2030" element={<Article2Page />} />
         </Routes>
       </div>
     </Router>

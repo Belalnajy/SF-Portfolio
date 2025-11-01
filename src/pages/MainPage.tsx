@@ -63,18 +63,6 @@ export default function HomePage() {
         >
           <AboutSection />
         </motion.div>
-
-        {/* How It Works - Scroll triggered */}
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-        >
-          <HowItWorks />
-        </motion.div>
-
         {/* Features Section - Scroll triggered */}
         <motion.div
           variants={sectionVariants}
@@ -84,6 +72,16 @@ export default function HomePage() {
           transition={{ duration: 0.6 }}
         >
           <FeaturesSection />
+        </motion.div>
+        {/* How It Works - Scroll triggered */}
+        <motion.div
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <HowItWorks />
         </motion.div>
 
         {/* FAQ - Scroll triggered with scale */}

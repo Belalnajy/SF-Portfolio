@@ -44,19 +44,13 @@ export function Hero() {
               <img src="/hero.png" alt="Smart Shopping Illustration" className="w-full h-auto" />
             </div>
 
-            {/* Buttons */}
+            {/* Button */}
             <div className="flex flex-col gap-[15px] w-full max-w-[320px]">
               <button
                 onClick={handleDownloadApp}
-                className="flex items-center justify-center h-[60px] w-full px-[20px] rounded-[12px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors shadow-md"
+                className="flex items-center justify-center h-[65px] w-full px-[20px] rounded-[15px] bg-gradient-to-r from-[#5dba47] to-[#4da93a] hover:from-[#4da93a] hover:to-[#3d8a2e] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                <span className="text-white text-[18px] font-bold">أحصل على التطبيق الان</span>
-              </button>
-              <button
-                onClick={() => navigate('/store-form')}
-                className="flex items-center justify-center h-[60px] w-full px-[20px] rounded-[12px] bg-white border-2 border-[#5dba47] hover:bg-[rgba(93,186,71,0.05)] transition-colors"
-              >
-                <span className="text-[#5dba47] text-[18px] font-bold">كن شريك نجاح</span>
+                <span className="text-white text-[19px] font-bold">أحصل على التطبيق الآن</span>
               </button>
             </div>
           </div>
@@ -107,21 +101,13 @@ export function Hero() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-[20px] items-center">
-                <button
-                  onClick={() => navigate('/store-form')}
-                  className="flex items-center justify-center h-[75px] w-[260px] px-[20px] py-[5px] rounded-[15px] bg-[rgba(44,70,83,0.05)] hover:bg-[rgba(44,70,83,0.1)] transition-colors"
-                >
-                  <span className="text-[#5dba47] text-[20px] font-bold whitespace-nowrap">
-                    كن شريك نجاح
-                  </span>
-                </button>
+              <div className="flex justify-end items-center mt-4">
                 <button
                   onClick={handleDownloadApp}
-                  className="flex items-center justify-center h-[75px] w-[260px] px-[20px] py-[5px] rounded-[15px] bg-[#5dba47] hover:bg-[#4da93a] transition-colors"
+                  className="flex items-center justify-center h-[80px] w-[300px] px-[25px] py-[5px] rounded-[20px] bg-gradient-to-r from-[#5dba47] to-[#4da93a] hover:from-[#4da93a] hover:to-[#3d8a2e] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
                 >
-                  <span className="text-white text-[20px] font-bold whitespace-nowrap">
-                    أحصل على التطبيق الان
+                  <span className="text-white text-[22px] font-bold whitespace-nowrap">
+                    أحصل على التطبيق الآن
                   </span>
                 </button>
               </div>

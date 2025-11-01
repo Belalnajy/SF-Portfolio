@@ -282,37 +282,30 @@ const ArticlePage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12 md:mb-16"
+          className="mb-12 md:mb-16 bg-gradient-to-br from-[#5DBA47]/5 to-transparent rounded-2xl"
         >
-          <div className="flex flex-col md:flex-row  items-center justify-center p-6 md:p-12">
+          <div className="flex flex-col items-center justify-center p-6 md:p-12 max-w-5xl mx-auto">
             {/* Content */}
-            <div className="flex-1 text-right ">
+            <div className="text-right w-full">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2C4653] mb-4 md:mb-6 leading-relaxed">
                 الفرص التي يقدمها التحول الرقمي للمتاجر
               </h2>
 
-              <p className="text-[#2C4653] text-base md:text-2xl mb-4 md:mb-6 max-w-[720px]">
+              <p className="text-[#2C4653] text-base md:text-2xl mb-6 md:mb-8">
                 باستخدام حلول مثل{' '}
                 <span className="text-[#5DBA47] font-bold">Smart & Fast Shopping</span> يمكن للمتاجر
                 أن تحقق قفزة في الكفاءة التشغيلية والمبيعات :
               </p>
 
-              <div className="space-y-3 md:space-y-4">
+              <div className="space-y-4 md:space-y-5 bg-white/50 rounded-xl p-6 md:p-8">
                 {DIGITAL_OPPORTUNITIES.map((opportunity, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#5DBA47] flex-shrink-0"></div>
-                    <p className="text-[#2C4653CC] text-base md:text-xl">{opportunity}</p>
+                  <div key={index} className="flex items-center gap-3 md:gap-4">
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#5DBA47] flex-shrink-0"></div>
+                    <p className="text-[#2C4653CC] text-base md:text-xl leading-relaxed">{opportunity}</p>
                   </div>
                 ))}
               </div>
             </div>
-
-            {/* Logo */}
-            <img
-              src="/logo-imp-art.png"
-              alt="Smart & Fast Shopping"
-              className="me-0 md:me-[110px] pt-20 md:pt-40 "
-            />
           </div>
         </motion.section>
 

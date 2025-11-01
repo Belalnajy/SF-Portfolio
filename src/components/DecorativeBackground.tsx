@@ -20,7 +20,7 @@ export default function DecorativeBackground() {
         </svg>
       </div>
 
-      {/* Bottom Left Decorative SVG - Hidden on mobile */}
+      {/* Bottom Left Decorative SVG - Hidden on mobile
       <div className="hidden lg:block pointer-events-none absolute -left-8 top-[1200px] lg:top-[1714px] h-[150px] lg:h-[212px] w-[180px] lg:w-[262px] rotate-180 scale-y-[-100%] opacity-10">
         <svg className="size-full" fill="none" viewBox="0 0 263 214">
           <g>
@@ -34,7 +34,7 @@ export default function DecorativeBackground() {
             <path d={svgPaths.pfa46b80} stroke="#5DBA47" strokeWidth="2" />
           </g>
         </svg>
-      </div>
+      </div> */}
 
       {/* Middle Right Decorative SVG - Hidden on mobile */}
       <div className="hidden lg:block pointer-events-none absolute right-[150px] lg:right-[270px] top-[900px] lg:top-[1263px] h-[200px] lg:h-[275px] w-[250px] lg:w-[340px] opacity-10">
@@ -53,7 +53,7 @@ export default function DecorativeBackground() {
       </div>
 
       {/* Bottom Left Large Decorative SVG - Hidden on mobile */}
-      <div className="hidden lg:block pointer-events-none absolute -left-[70px] lg:-left-[105px] top-[800px] lg:top-[1157px] h-[300px] lg:h-[422px] w-[380px] lg:w-[522px] rotate-180 scale-y-[-100%] opacity-10">
+      <div className="hidden lg:block pointer-events-none absolute -left-[70px] lg:-left-[110px] top-[800px] lg:top-[1100px] h-[300px] lg:h-[422px] w-[380px] lg:w-[522px] rotate-180 scale-y-[-100%] opacity-10">
         <svg className="size-full" fill="none" viewBox="0 0 523 424">
           <g>
             <path d={svgPaths.p3f5938a0} fill="#5DBA47" />

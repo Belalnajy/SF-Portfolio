@@ -1,4 +1,3 @@
-import React from 'react';
 import svgPaths from '../imports/svg-x8okmw8j48';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
@@ -225,7 +224,7 @@ function Navigation() {
     { name: 'الرئيسية', path: '/' },
     { name: 'المتاجر', path: '/store' },
     { name: 'من نحن', path: '/about' },
-    { name: 'المقالات', path: '/article' },
+    { name: 'المقالات', path: '/articles' },
     { name: 'تواصل معنا', path: '/store-form' },
   ];
 
@@ -255,7 +254,7 @@ function MobileNavigation({ setMobileMenuOpen }: { setMobileMenuOpen: (open: boo
     { name: 'الرئيسية', path: '/' },
     { name: 'المتاجر', path: '/store' },
     { name: 'من نحن', path: '/about' },
-    { name: 'المقالات', path: '/article' },
+    { name: 'المقالات', path: '/articles' },
     { name: 'تواصل معنا', path: '/store-form' },
   ];
 
